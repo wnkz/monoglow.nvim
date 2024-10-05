@@ -1,0 +1,41 @@
+# MonoGlow
+
+A dark, mostly monochrome colorscheme with a touch of glowing
+
+## ✨ Features
+
+- Supports the latest [Neovim](https://github.com/neovim/neovim)
+  [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
+- Terminal colors.
+- Supports ~all major~ plugins.
+
+## 📦 Installation
+
+Install the theme with your preferred package manager, such as
+[folke/lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+  "wnkz/monoglow.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+}
+```
+
+## 🚀 Usage
+
+```lua
+vim.cmd[[colorscheme monoglow]]
+```
+
+```vim
+colorscheme monoglow
+```
+
+## Acknowledgement
+
+- https://github.com/folke/tokyonight.nvim
+- https://github.com/Aliqyan-21/darkvoid.nvim
+- https://github.com/slugbyte/lackluster.nvim
+- https://github.com/fcancelinha/nordern.nvim
