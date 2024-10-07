@@ -3,6 +3,11 @@
 A dark, mostly monochrome colorscheme with a touch of glowing.
 In simpler terms, it's like [lackluster](https://github.com/slugbyte/lackluster.nvim) and [darkvoid](https://github.com/Aliqyan-21/darkvoid.nvim) had a baby.
 
+![N_C](https://github.com/user-attachments/assets/66902084-2c9c-4e38-b21d-73c4dbeb955f)
+
+> [!NOTE]
+> More 📷 [here](SCREENSHOTS.md)
+
 ## ✨ Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
