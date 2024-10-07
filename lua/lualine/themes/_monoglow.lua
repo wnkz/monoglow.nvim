@@ -1,5 +1,3 @@
-local util = require("monoglow.util")
-
 local M = {}
 
 function M.get()
@@ -8,39 +6,33 @@ function M.get()
   local hl = {}
 
   hl.normal = {
-    a = { bg = colors.gray12, fg = colors.fg },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
+    a = { bg = colors.statusline, fg = colors.gray7 },
+    b = { bg = colors.gray2, fg = colors.fg },
+    c = { bg = colors.statusline, fg = colors.gray6 },
   }
 
   hl.insert = {
-    a = { bg = colors.gray12, fg = colors.gray1 },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
+    a = { bg = colors.glow, fg = colors.statusline },
+    b = { bg = colors.gray2, fg = colors.fg },
+    c = { bg = colors.statusline, fg = colors.gray6 },
   }
 
   hl.command = {
-    a = { bg = colors.glow, fg = colors.gray12 },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
+    a = { bg = colors.glow, fg = colors.statusline },
+    b = { bg = colors.gray2, fg = colors.fg },
+    c = { bg = colors.statusline, fg = colors.gray6 },
   }
 
   hl.visual = {
-    a = { bg = colors.gray12, fg = colors.glow },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
+    a = { bg = colors.gray9, fg = colors.statusline },
+    b = { bg = colors.gray2, fg = colors.fg },
+    c = { bg = colors.statusline, fg = colors.gray6 },
   }
 
   hl.replace = {
-    a = { bg = colors.gray12, fg = colors.fg },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
-  }
-
-  hl.terminal = {
-    a = { bg = colors.gray12, fg = colors.fg },
-    b = { bg = colors.gray10, fg = colors.fg },
-    c = { bg = colors.gray11, fg = colors.fg },
+    a = { bg = colors.gray9, fg = colors.statusline },
+    b = { bg = colors.gray2, fg = colors.fg },
+    c = { bg = colors.statusline, fg = colors.gray6 },
   }
 
   hl.inactive = {
