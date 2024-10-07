@@ -22,6 +22,7 @@ local function reload()
   local colorscheme = vim.g.colors_name or M.colorscheme
   colorscheme = colorscheme:find(M.colorscheme) and colorscheme or M.colorscheme
   vim.cmd.colorscheme(colorscheme)
+  vim.cmd("HighlightColors On")
 end
 reload = vim.schedule_wrap(reload)
 

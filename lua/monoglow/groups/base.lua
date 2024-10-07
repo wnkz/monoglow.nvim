@@ -4,18 +4,32 @@ local M = {}
 
 function M.get(c, opts)
   return {
-    -- editor
-    EndOfBuffer = { fg = opts.eob and c.gray9 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    Visual = { bg = c.gray10 },
-
     -- editor:text
     Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- normal text
     NormalNC = "Normal", -- normal text in non-current windows
-    NormalFloat = { fg = c.fg, bg = c.gray11 },
+    Title = { fg = c.title },
+    Whitespace = { fg = c.whitespace },
+    EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+
+    -- editor:visual
+    Visual = { bg = c.visual },
+    VisualNOS = "Visual",
+    LspReferenceText = { bg = c.gray4 },
+
+    -- editor:float
+    NormalFloat = { fg = c.fg, bg = c.bg_popup },
+    FloatBorder = { fg = c.border, bg = c.bg_popup },
+    FloatTitle = { fg = c.title },
+
+    -- editor:nontext
+    NonText = { fg = c.gray4 },
 
     -- editor:cursor
     Cursor = { fg = c.bg, bg = c.fg },
-    LineNr = { fg = c.gray8 },
+    CursorLine = { bg = c.selection },
+    CursorLineNr = { fg = c.cur_line_nr },
+    LineNr = { fg = c.line_nr },
+    SignColumn = { bg = opts.transparent and c.none or c.bg },
 
     -- editor:search
     CurSearch = "IncSearch",
@@ -34,29 +48,38 @@ function M.get(c, opts)
     PmenuSel = { fg = c.bg, bg = c.glow, bold = true },
 
     -- editor:statusline
-    StatusLine = { fg = c.fg, bg = c.gray12 }, -- status line of current window
-    StatusLineNC = { fg = c.gray5, bg = c.gray11 }, -- status lines of not-current windows
+    StatusLine = { fg = c.gray7, bg = c.statusline }, -- status line of current window
+    StatusLineNC = { fg = c.gray4, bg = c.gray1 }, -- status lines of not-current windows
 
     -- syntax
-    Delimiter = { fg = c.gray2 }, --  character that needs attention
-    Function = { fg = c.gray3, bold = opts.glow }, -- function name (also: methods for classes)
-    Identifier = { fg = c.gray5, bold = opts.glow }, -- (preferred) any variable name
-    Keyword = { fg = c.gray1, bold = opts.glow }, --  any other keyword
-    Operator = { fg = c.glow, bold = opts.glow },
+    Conditional = "Keyword",
+    Exception = "Keyword",
+    Function = { fg = c.syntax.func_call, bold = opts.glow }, -- function name (also: methods for classes)
+    Identifier = { fg = c.syntax.type, bold = opts.glow }, -- (preferred) any variable name
+    Keyword = { fg = c.syntax.keyword, bold = opts.glow }, --  any other keyword
+    Label = "Keyword",
     PreProc = "Keyword", -- (preferred) generic Preprocessor
-    Special = { fg = c.gray2 }, -- (preferred) any special symbol
-    Type = { fg = c.gray6 }, -- (preferred) int, long, char, etc.
+    Repeat = "Keyword",
+    Special = { fg = c.syntax.special }, -- (preferred) any special symbol
+    Statement = "Keyword", -- (preferred) any statement
+    Type = { fg = c.syntax.type }, -- (preferred) int, long, char, etc.
+    Variable = { fg = c.syntax.var },
 
     -- syntax:constants
-    Boolean = { fg = c.blue2 },
+    Boolean = { fg = c.syntax.boolean },
     Character = "String",
-    Constant = { fg = c.blue1 }, -- (preferred) any constant
+    Constant = { fg = c.syntax.const }, -- (preferred) any constant
     Float = "Constant",
     Number = "Constant",
-    String = { fg = c.gray5 }, --   a string constant: "this is a string"
+    String = { fg = c.syntax.string }, -- a string constant: "this is a string"
+
+    -- syntax:punctuation
+    Quote = "String",
+    Operator = { fg = c.glow, bold = opts.glow },
+    Delimiter = { fg = c.syntax.punctuation }, -- character that needs attention
 
     -- syntax:comments
-    Comment = { fg = c.gray7, italic = true }, -- any comment
+    Comment = { fg = c.syntax.comment, italic = true }, -- any comment
 
     -- diagnostics
     DiagnosticError = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default

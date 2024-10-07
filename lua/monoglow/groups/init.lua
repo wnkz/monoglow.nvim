@@ -4,6 +4,8 @@ local M = {}
 
 M.plugins = {
   ["dashboard-nvim"] = "dashboard",
+  ["gitsigns.nvim"] = "gitsigns",
+  ["markview.nvim"] = "markview",
   ["telescope.nvim"] = "telescope",
 }
 
@@ -22,7 +24,9 @@ end
 function M.setup(colors, opts)
   local groups = {
     base = true,
+    kinds = true,
     treesitter = true,
+    semantics_token = true,
   }
 
   if opts.plugins.all then

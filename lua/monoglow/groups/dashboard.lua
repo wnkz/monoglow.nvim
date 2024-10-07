@@ -5,21 +5,22 @@ M.url = "https://github.com/nvimdev/dashboard-nvim"
 function M.get(c, opts)
   return {
     -- General
-    DashboardHeader = { fg = c.gray1 },
-    DashboardFooter = { fg = c.gray1 },
+    DashboardHeader = { fg = c.fg },
+    DashboardFooter = { fg = c.gray4 },
     -- Hyper theme
-    DashboardProjectTitle = { fg = c.gray2 },
-    DashboardProjectTitleIcon = { fg = c.gray2 },
-    DashboardProjectIcon = { fg = c.gray3 },
-    DashboardMruTitle = { fg = c.gray3 },
-    DashboardMruIcon = { fg = c.gray2 },
-    DashboardFiles = { fg = c.blue1 },
+    DashboardProjectTitle = { fg = c.title },
+    DashboardProjectTitleIcon = { fg = c.title },
+    DashboardProjectIcon = { fg = c.title },
+    DashboardMruTitle = { fg = c.title },
+    DashboardMruTitleIcon = { fg = c.title },
+    DashboardMruIcon = { fg = c.title },
+    DashboardFiles = { fg = c.fg },
     DashboardShortCutIcon = { fg = c.glow },
     -- Doom theme
     DashboardDesc = { fg = c.fg },
     DashboardKey = { fg = c.glow },
-    DashboardIcon = { fg = c.gray2, bold = true },
-    DashboardShortCut = { fg = c.gray2 },
+    DashboardIcon = { fg = c.icon, bold = true },
+    DashboardShortCut = { fg = c.gray10 },
   }
 end
 

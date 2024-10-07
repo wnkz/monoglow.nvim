@@ -1,6 +1,7 @@
 # MonoGlow
 
-A dark, mostly monochrome colorscheme with a touch of glowing
+A dark, mostly monochrome colorscheme with a touch of glowing.
+In simpler terms, it's like [lackluster](https://github.com/slugbyte/lackluster.nvim) and [darkvoid](https://github.com/Aliqyan-21/darkvoid.nvim) had a baby.
 
 ## ✨ Features
 
