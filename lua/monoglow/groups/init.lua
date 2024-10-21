@@ -9,6 +9,7 @@ M.plugins = {
   ["markview.nvim"] = "markview",
   ["mason.nvim"] = "mason",
   ["neo-tree.nvim"] = "neo-tree",
+  ["nvim-cmp"] = "cmp",
   ["oil.nvim"] = "oil",
   ["telescope.nvim"] = "telescope",
 }
