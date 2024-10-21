@@ -12,6 +12,8 @@ M.plugins = {
   ["nvim-cmp"] = "cmp",
   ["oil.nvim"] = "oil",
   ["telescope.nvim"] = "telescope",
+  ["which-key.nvim"] = "which-key",
+  ["window-picker"] = "nvim-window-picker",
 }
 
 local me = debug.getinfo(1, "S").source:sub(2)
