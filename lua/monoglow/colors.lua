@@ -114,6 +114,12 @@ function M.setup(opts)
     delete = "#ffb3ba",
   }
 
+  colors.cmp = {
+    kind = colors.gray7,
+    snippet = colors.lack,
+    deprecated = colors.gray4,
+  }
+
   colors.diff = colors.git
 
   colors.error = colors.light_red
