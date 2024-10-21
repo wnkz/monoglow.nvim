@@ -10,6 +10,7 @@ function M.get(c, opts)
     Title = { fg = c.title },
     Whitespace = { fg = c.whitespace },
     EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    WinSeparator = { fg = c.border },
 
     -- editor:visual
     Visual = { bg = c.visual },
