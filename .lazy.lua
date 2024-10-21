@@ -38,4 +38,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   callback = reload,
 })
 
-return {}
+return {
+  {
+    "wnkz/monoglow.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = M.opts,
+    dev = true,
+  },
+}
