@@ -33,7 +33,7 @@ function M.get(c, opts)
 
     -- editor:search
     CurSearch = "IncSearch",
-    IncSearch = { fg = c.bg, bg = c.glow }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    IncSearch = { fg = c.black, bg = c.glow }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Search = { fg = c.glow, bold = true },
     Substitute = "Search",
 
@@ -44,12 +44,17 @@ function M.get(c, opts)
     DiffText = { fg = c.bg, bg = c.blue2 },
 
     -- editor:menu
-    Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    PmenuSel = { fg = c.bg, bg = c.glow, bold = true },
+    Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg_menu },
+    PmenuSel = { fg = c.black, bg = c.glow, bold = true },
+    PmenuSbar = { fg = c.gray5, bg = c.gray3 },
+    PmenuThumb = { fg = c.gray3, bg = c.gray5 },
 
     -- editor:statusline
     StatusLine = { fg = c.gray7, bg = c.statusline }, -- status line of current window
     StatusLineNC = { fg = c.gray4, bg = c.gray1 }, -- status lines of not-current windows
+
+    -- editor:misc
+    Directory = { fg = c.fs.dir },
 
     -- syntax
     Conditional = "Keyword",

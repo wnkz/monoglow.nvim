@@ -15,18 +15,33 @@ function M.setup(opts)
     light_red = "#ffc0b9", -- NvimLightRed
     light_yellow = "#fce094", -- NvimLightYellow
 
-    black = "#000000", -- black = "#000000",
-    gray1 = "#1e1e1e", -- gray1 = "#080808",
-    gray2 = "#2a2a2a", -- gray2 = "#191919",
-    gray3 = "#303030", -- gray3 = "#2a2a2a",
-    gray4 = "#404040", -- gray4 = "#444444",
-    gray5 = "#585858", -- gray5 = "#555555",
-    gray6 = "#a1a1a1", -- gray6 = "#7a7a7a",
-    gray7 = "#b1b1b1", -- gray7 = "#aaaaaa",
-    gray8 = "#d1d1d1", -- gray8 = "#cccccc",
-    gray9 = "#e1e1e1", -- gray9 = "#dddddd",
+    -- Lackluster grays
+    black = "#000000",
+    gray1 = "#080808",
+    gray2 = "#191919",
+    gray3 = "#2a2a2a",
+    gray4 = "#444444",
+    gray5 = "#555555",
+    gray6 = "#7a7a7a",
+    gray7 = "#aaaaaa",
+    gray8 = "#cccccc",
+    gray9 = "#dddddd",
     gray10 = "#f1f1f1",
-    white = "#ffffff", -- white = "#ffffff",
+    white = "#ffffff",
+
+    -- Darkvoid grays
+    -- black = "#000000",
+    -- gray1 = "#1e1e1e",
+    -- gray2 = "#2a2a2a",
+    -- gray3 = "#303030",
+    -- gray4 = "#404040",
+    -- gray5 = "#585858",
+    -- gray6 = "#a1a1a1",
+    -- gray7 = "#b1b1b1",
+    -- gray8 = "#d1d1d1",
+    -- gray9 = "#e1e1e1",
+    -- gray10 = "#f1f1f1",
+    -- white = "#ffffff",
 
     blue1 = "#b2d8d8",
     blue2 = "#66b2b2",
@@ -39,8 +54,8 @@ function M.setup(opts)
   -- NOTE: special colors
   colors.fg = "#c0c0c0"
   colors.bg = "#1c1c1c"
-  colors.bg_menu = "#191919"
-  colors.bg_popup = "#1a1a1a"
+  colors.bg_menu = "#1f1f1f"
+  colors.bg_popup = "#202020"
 
   colors.glow = colors.bright_green
 
@@ -82,6 +97,15 @@ function M.setup(opts)
     type_primitive = colors.gray8,
     var = colors.gray9,
     var_member = colors.gray8,
+  }
+
+  colors.fs = {
+    dir = colors.gray7,
+    file = colors.gray8,
+    exec = colors.blue2,
+    link = colors.luster,
+    binary_data = colors.gray6,
+    socket = colors.gray6,
   }
 
   colors.git = {
