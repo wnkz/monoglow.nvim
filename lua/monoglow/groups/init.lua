@@ -6,6 +6,7 @@ M.plugins = {
   ["dashboard-nvim"] = "dashboard",
   ["gitsigns.nvim"] = "gitsigns",
   ["markview.nvim"] = "markview",
+  ["mason.nvim"] = "mason",
   ["telescope.nvim"] = "telescope",
 }
 
