@@ -1,5 +1,6 @@
 local M = {}
 
+---@type monoglow.HighlightsFn
 function M.get(c)
   return {
     ["@lsp.type.boolean"] = "@boolean",

@@ -2,34 +2,33 @@ local util = require("monoglow.util")
 
 local M = {}
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     -- editor:text
     Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- normal text
     NormalNC = "Normal", -- normal text in non-current windows
     Title = { fg = c.title },
-    Whitespace = { fg = c.whitespace },
-    EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    WinSeparator = { fg = c.border },
+    Whitespace = { fg = c.special.whitespace },
+
+    -- editor:nontext
+    NonText = { fg = c.gray4 },
 
     -- editor:visual
     Visual = { bg = c.visual },
     VisualNOS = "Visual",
-    LspReferenceText = { bg = c.gray4 },
+    LspReferenceText = { bg = c.lsp_ref },
 
     -- editor:float
     NormalFloat = { fg = c.fg, bg = c.bg_popup },
     FloatBorder = { fg = c.border, bg = c.bg_popup },
     FloatTitle = { fg = c.title },
 
-    -- editor:nontext
-    NonText = { fg = c.gray4 },
-
     -- editor:cursor
     Cursor = { fg = c.bg, bg = c.fg },
-    CursorLine = { bg = c.selection },
+    CursorLine = { bg = c.cur_line },
     CursorLineNr = { fg = c.cur_line_nr },
-    LineNr = { fg = c.line_nr },
+    LineNr = { fg = c.fg_gutter },
     SignColumn = { bg = opts.transparent and c.none or c.bg },
 
     -- editor:search
@@ -38,11 +37,15 @@ function M.get(c, opts)
     Search = { fg = c.glow, bold = true },
     Substitute = "Search",
 
+    -- editor:fold
+    Folded = { fg = c.gray4 },
+    FoldColumn = { fg = c.gray4 },
+
     -- editor:diff
     DiffAdd = { fg = c.bg, bg = c.diff.add }, -- diff mode: Added line |diff.txt|
     DiffChange = { fg = c.bg, bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
     DiffDelete = { fg = c.bg, bg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
-    DiffText = { fg = c.bg, bg = c.blue2 },
+    DiffText = { fg = c.bg, bg = c.diff.text }, -- diff mode: Changed text within a changed line |diff.txt|
 
     -- editor:menu
     Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg_menu },
@@ -51,8 +54,14 @@ function M.get(c, opts)
     PmenuThumb = { fg = c.gray3, bg = c.gray5 },
 
     -- editor:statusline
-    StatusLine = { fg = c.gray7, bg = c.statusline }, -- status line of current window
-    StatusLineNC = { fg = c.gray4, bg = c.gray1 }, -- status lines of not-current windows
+    StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
+    StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows
+    WinBar = "StatusLine",
+    WinBarNC = "StatusLineNC",
+
+    -- editor:ui (other)
+    EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    WinSeparator = { fg = c.border },
 
     -- editor:misc
     Directory = { fg = c.fs.dir },
@@ -101,6 +110,9 @@ function M.get(c, opts)
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
     DiagnosticUnderlineInfo = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics
     DiagnosticUnderlineHint = { undercurl = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
+
+    -- webdevicon
+    DevIconDefault = { fg = c.icon },
   }
 end
 

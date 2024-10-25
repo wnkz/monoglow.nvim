@@ -1,6 +1,8 @@
 local M = {}
 
+---@class monoglow.Config
 M.defaults = {
+  style = "z",
   glow = true,
   transparent = false,
   plugins = {
@@ -10,12 +12,15 @@ M.defaults = {
   eob = false,
 }
 
+---@type monoglow.Config
 M.options = nil
 
+---@param options? monoglow.Config
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 
+---@param opts? monoglow.Config
 function M.extend(opts)
   return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end

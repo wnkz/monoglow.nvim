@@ -1,39 +1,34 @@
+local util = require("monoglow.util")
+
 local M = {}
 
-function M.get()
-  local colors, config = require("monoglow.colors").setup()
+---@param style? string
+function M.get(style)
+  local colors, config = require("monoglow.colors").setup({ style = style })
 
   local hl = {}
 
   hl.normal = {
-    a = { bg = colors.statusline, fg = colors.gray7 },
-    b = { bg = colors.gray2, fg = colors.fg },
-    c = { bg = colors.statusline, fg = colors.gray6 },
+    a = { bg = util.darken(colors.bg_statusline, 0.2), fg = colors.gray8 },
+    b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
+    c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
 
   hl.insert = {
-    a = { bg = colors.glow, fg = colors.statusline },
-    b = { bg = colors.gray2, fg = colors.fg },
-    c = { bg = colors.statusline, fg = colors.gray6 },
+    a = { bg = colors.glow, fg = colors.black },
+    b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
+    c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
 
-  hl.command = {
-    a = { bg = colors.glow, fg = colors.statusline },
-    b = { bg = colors.gray2, fg = colors.fg },
-    c = { bg = colors.statusline, fg = colors.gray6 },
-  }
+  hl.command = hl.insert
 
   hl.visual = {
-    a = { bg = colors.gray9, fg = colors.statusline },
-    b = { bg = colors.gray2, fg = colors.fg },
-    c = { bg = colors.statusline, fg = colors.gray6 },
+    a = { bg = colors.gray9, fg = colors.black },
+    b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
+    c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
 
-  hl.replace = {
-    a = { bg = colors.gray9, fg = colors.statusline },
-    b = { bg = colors.gray2, fg = colors.fg },
-    c = { bg = colors.statusline, fg = colors.gray6 },
-  }
+  hl.replace = hl.visual
 
   hl.inactive = {
     a = { bg = colors.bg, fg = colors.bg },

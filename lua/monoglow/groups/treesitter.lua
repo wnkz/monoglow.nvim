@@ -1,6 +1,7 @@
 local M = {}
 
-function M.get(c, opts)
+---@type monoglow.HighlightsFn
+function M.get(c)
   return {
     ["@annotation"] = "PreProc",
     ["@attribute"] = { fg = c.syntax.keyword },
@@ -24,7 +25,7 @@ function M.get(c, opts)
     ["@diff.minus"] = "DiffDelete",
     ["@diff.plus"] = "DiffAdd",
     ["@function"] = { fg = c.syntax.func_def },
-    ["@function.builtin"] = "Special",
+    ["@function.builtin"] = { fg = c.syntax.builtin },
     ["@function.call"] = { fg = c.syntax.func_call },
     ["@function.macro"] = "Macro",
     ["@function.method"] = "@function",
@@ -43,7 +44,6 @@ function M.get(c, opts)
     ["@keyword.storage"] = "StorageClass",
     ["@label"] = { fg = c.title }, -- For labels: `label:` in C and `:label:` in Lua.
     ["@markup"] = "@none",
-    ["@markup.quote"] = { fg = c.gray6 },
     ["@markup.emphasis"] = { italic = true },
     ["@markup.environment"] = "Macro",
     ["@markup.environment.name"] = "Type",
@@ -57,6 +57,7 @@ function M.get(c, opts)
     ["@markup.list.checked"] = { fg = c.light_green }, -- For brackets and parens.
     ["@markup.list.unchecked"] = { fg = c.light_cyan }, -- For brackets and parens.
     ["@markup.math"] = "Special",
+    ["@markup.quote"] = { fg = c.gray6 },
     ["@markup.raw"] = "String",
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.strong"] = { fg = c.gray4, bold = true },
@@ -68,14 +69,14 @@ function M.get(c, opts)
     ["@number"] = "Number",
     ["@number.float"] = "Float",
     ["@operator"] = "Operator", -- For any operator: `+`, but also `->` and `*` in C.
-    ["@property"] = { fg = c.gray7 },
+    ["@property"] = { fg = c.syntax.property },
     ["@punctuation.bracket"] = "Delimiter", -- For brackets and parens.
     ["@punctuation.delimiter"] = "Delimiter", -- For delimiters ie: `.`
     ["@punctuation.special"] = "Delimiter", -- For special symbols (e.g. `{}` in string interpolation)
     ["@string"] = "String",
     ["@string.escape"] = { fg = c.syntax.string_escape }, -- For escape characters within a string.
-    ["@string.special"] = { fg = c.syntax.string_escape },
     ["@string.regexp"] = { fg = c.syntax.string_escape }, -- For regexes.
+    ["@string.special"] = { fg = c.syntax.string_escape },
     ["@tag"] = { fg = c.syntax.tag },
     ["@tag.attribute"] = { fg = c.gray4 },
     ["@tag.delimiter"] = "@tag",
