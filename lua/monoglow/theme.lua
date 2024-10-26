@@ -1,5 +1,6 @@
 local M = {}
 
+---@param opts? monoglow.Config
 function M.setup(opts)
   opts = require("monoglow.config").extend(opts)
 
