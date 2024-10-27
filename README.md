@@ -2,9 +2,7 @@
 
 A dark, mostly monochrome colorscheme with a touch of glowing.
 
-In simpler terms, it's like [lackluster.nvim](https://github.com/slugbyte/lackluster.nvim) and [darkvoid.nvim](https://github.com/Aliqyan-21/darkvoid.nvim) had a baby.
-
-![zig](https://github.com/user-attachments/assets/d8766bcf-ff92-4304-b135-3b32cc74bfc3)
+![zig](https://github.com/user-attachments/assets/31d2c5d1-db25-4b63-b2ad-b6be7abc678c)
 ![modes](https://github.com/user-attachments/assets/471357fe-3c28-470c-9d36-360f2ea175e3)
 
 > [!NOTE]
@@ -45,6 +43,12 @@ colorscheme monoglow-z
 colorscheme monoglow-lack
 colorscheme monoglow-void
 ```
+
+## About
+
+To build the colorscheme, I took everthing I liked about the "colors" of [slugbyte/lackluster.nvim](https://github.com/slugbyte/lackluster.nvim),
+I added the amazing touch of glow and bright operators from [Aliqyan-21/darkvoid.nvim](https://github.com/Aliqyan-21/darkvoid.nvim),
+and I used [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) for the code structure.
 
 ## Acknowledgement
 
