@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nvim -u tests/minit.lua --headless +"lua require('monoglow.extra').setup()" +qa

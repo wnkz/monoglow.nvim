@@ -47,4 +47,91 @@ function M.blend_fg(hex, amount, fg)
 end
 M.lighten = M.blend_fg
 
+---@param color string|Palette
+function M.invert(color)
+  if type(color) == "table" then
+    for key, value in pairs(color) do
+      color[key] = M.invert(value)
+    end
+  elseif type(color) == "string" then
+    local hsluv = require("monoglow.hsluv")
+    if color ~= "NONE" then
+      local hsl = hsluv.hex_to_hsluv(color)
+      hsl[3] = 100 - hsl[3]
+      if hsl[3] < 40 then
+        hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+      end
+      return hsluv.hsluv_to_hex(hsl)
+    end
+  end
+  return color
+end
+
+---@param color string  -- The hex color string to be adjusted
+---@param lightness_amount number? -- The amount to increase lightness by (optional, default: 0.1)
+---@param saturation_amount number? -- The amount to increase saturation by (optional, default: 0.15)
+function M.brighten(color, lightness_amount, saturation_amount)
+  lightness_amount = lightness_amount or 0.05
+  saturation_amount = saturation_amount or 0.2
+  local hsluv = require("monoglow.hsluv")
+
+  -- Convert the hex color to HSLuv
+  local hsl = hsluv.hex_to_hsluv(color)
+
+  -- Increase lightness slightly
+  hsl[3] = math.min(hsl[3] + (lightness_amount * 100), 100)
+
+  -- Increase saturation a bit more to make the color more vivid
+  hsl[2] = math.min(hsl[2] + (saturation_amount * 100), 100)
+
+  -- Convert the HSLuv back to hex and return
+  return hsluv.hsluv_to_hex(hsl)
+end
+
+---@param groups monoglow.Highlights
+---@return table<string, vim.api.keyset.highlight>
+function M.resolve(groups)
+  for _, hl in pairs(groups) do
+    if type(hl.style) == "table" then
+      for k, v in pairs(hl.style) do
+        hl[k] = v
+      end
+      hl.style = nil
+    end
+  end
+  return groups
+end
+
+-- Simple string interpolation.
+--
+-- Example template: "${name} is ${value}"
+--
+---@param str string template string
+---@param table table key value pairs to replace in the string
+function M.template(str, table)
+  return (
+    str:gsub("($%b{})", function(w)
+      return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), ".", { plain = true }))) or w
+    end)
+  )
+end
+
+---@param file string
+function M.read(file)
+  local fd = assert(io.open(file, "r"))
+  ---@type string
+  local data = fd:read("*a")
+  fd:close()
+  return data
+end
+
+---@param file string
+---@param contents string
+function M.write(file, contents)
+  vim.fn.mkdir(vim.fn.fnamemodify(file, ":h"), "p")
+  local fd = assert(io.open(file, "w+"))
+  fd:write(contents)
+  fd:close()
+end
+
 return M
