@@ -1,0 +1,9 @@
+monoglow.nvim
+
+This product includes portions of code derived from "tokyonight.nvim" (https://github.com/folke/tokyonight.nvim),
+which is licensed under the Apache License, Version 2.0.
+
+This project also draws inspiration, including colors and color arrangements, from "lackluster.nvim" (https://github.com/slugbyte/lackluster.nvim) 
+and "darkvoid.nvim" (https://github.com/Aliqyan-21/darkvoid.nvim), which are licensed under the MIT License.
+
+Copyright 2024 wnkz

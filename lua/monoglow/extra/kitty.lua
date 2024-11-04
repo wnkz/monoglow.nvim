@@ -10,60 +10,74 @@ function M.generate(colors)
 
 ## name:      ${_style_name}
 ## author:    wnkz (https://github.com/wnkz)
+## license:   APACHE-2.0
 ## upstream:  ${_upstream_url}
-## license:   MIT
+
+#: The basic colors
 
 background ${bg}
 foreground ${fg}
 selection_background ${visual}
 selection_foreground ${gray9}
 
+
+#: Cursor colors
+
 cursor ${fg}
 cursor_text_color ${bg}
 
+
+#: URL underline color when hovering with mouse
+
 url_color ${lack}
 
-# Tabs
+
+#: kitty window border colors and terminal bell colors
+
+active_border_color ${glow}
+
+
+#: Tab bar colors
+
 active_tab_background ${gray9}
 active_tab_foreground ${black}
 inactive_tab_background ${gray3}
 inactive_tab_foreground ${fg_sidebar}
+tab_bar_background none
+tab_bar_margin_color none
 
-# Windows
-active_border_color ${glow}
 
-# The 16 terminal colors
-# normal/bright
+#: The basic 16 colors
 
-# black
+#: black
 color0 ${terminal.black}
 color8 ${terminal.black_bright}
 
-# red
+#: red
 color1 ${terminal.red}
 color9 ${terminal.red_bright}
 
-# green
+#: green
 color2  ${terminal.green}
 color10 ${terminal.green_bright}
 
-# yellow
+#: yellow
 color3  ${terminal.yellow}
 color11 ${terminal.yellow_bright}
 
-# blue
+#: blue
 color4  ${terminal.blue}
 color12 ${terminal.blue_bright}
 
-# purple
+#: magenta
 color5  ${terminal.magenta}
 color13 ${terminal.magenta_bright}
 
-# cyan
+#: cyan
 color6  ${terminal.cyan}
 color14 ${terminal.cyan_bright}
 
-# white
+#: white
 color7  ${terminal.white}
 color15 ${terminal.white_bright}
 ]],
