@@ -117,8 +117,8 @@ function M.setup(opts)
     black_bright = util.lighten(colors.gray3, 0.80),
     red = colors.luster,
     red_bright = colors.lack,
-    green = "#1bfd9c",
-    green_bright = util.brighten("#1bfd9c"),
+    green = colors.glow,
+    green_bright = util.brighten(colors.glow),
     yellow = util.darken(colors.gray9, 0.80),
     yellow_bright = colors.gray9,
     blue = colors.gray6,
@@ -130,6 +130,8 @@ function M.setup(opts)
     white = colors.gray10,
     white_bright = colors.white,
   }
+
+  opts.on_colors(colors)
 
   return colors, opts
 end

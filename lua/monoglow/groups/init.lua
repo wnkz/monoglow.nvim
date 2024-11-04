@@ -82,6 +82,8 @@ function M.setup(colors, opts)
     end
   end
 
+  opts.on_highlights(ret, colors)
+
   return ret, groups
 end
 
