@@ -43,7 +43,7 @@ function M.setup(opts)
   colors.fg_gutter = colors.gray4
   colors.bg_statusline = util.lighten(colors.bg, 0.97)
 
-  colors.cur_line = util.lighten(colors.bg, 0.95)
+  colors.cur_line = util.lighten(colors.bg, 0.92)
   colors.cur_line_nr = colors.gray7
   colors.lsp_ref = util.lighten(colors.cur_line, 0.97)
   colors.visual = util.lighten(colors.cur_line, 0.95)
@@ -107,6 +107,29 @@ function M.setup(opts)
   colors.info = colors.light_cyan
   colors.hint = colors.luster
   colors.todo = colors.lack
+
+  -- NOTE:
+  -- inspirated from
+  -- https://github.com/PieterHeijman/terminal-color-themes/blob/master/movies/Psycho.json
+  ---@class TerminalColors
+  colors.terminal = {
+    black = colors.gray3,
+    black_bright = util.lighten(colors.gray3, 0.80),
+    red = colors.luster,
+    red_bright = colors.lack,
+    green = "#1bfd9c",
+    green_bright = util.brighten("#1bfd9c"),
+    yellow = util.darken(colors.gray9, 0.80),
+    yellow_bright = colors.gray9,
+    blue = colors.gray6,
+    blue_bright = colors.gray7,
+    magenta = colors.blue2,
+    magenta_bright = util.brighten(colors.blue2),
+    cyan = colors.gray8,
+    cyan_bright = util.lighten(colors.gray8, 0.80, colors.gray10),
+    white = colors.gray10,
+    white_bright = colors.white,
+  }
 
   return colors, opts
 end

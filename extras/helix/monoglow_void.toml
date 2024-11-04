@@ -1,0 +1,193 @@
+attribute = { fg = "#949494" }
+comment = { fg = "#585858", modifiers = ["italic"] }
+"comment.block.documentation" = 
+constant = { fg = "#b1b1b1" }
+"constant.builtin" = { fg = "#a1a1a1" }
+"constant.builtin.boolean" = { fg = "#66b2b2" }
+"constant.character" = { fg = "#b1b1b1" }
+"constant.character.escape" = { fg = "#708090" }
+"constant.numeric" = { fg = "#b1b1b1" }
+"constant.numeric.float" = { fg = "#b1b1b1" }
+"constant.numeric.integer" = { fg = "#b1b1b1" }
+constructor = { fg = "#b1b1b1" }
+"diagnostic.error" = { underline = { style = "curl" } }
+"diagnostic.hint" = { underline = { style = "curl" } }
+"diagnostic.info" = { underline = { style = "curl" } }
+"diagnostic.warning" = { underline = { style = "curl" } }
+"diff.delta" = 
+"diff.delta.moved" = 
+"diff.minus" = 
+"diff.plus" = 
+error = { fg = "#ffc0b9" }
+function = { fg = "#a1a1a1", modifiers = ["bold"] }
+"function.builtin" = { fg = "#585858" }
+"function.macro" = { fg = "#949494", modifiers = ["bold"] }
+"function.method" = { fg = "#d1d1d1" }
+"function.special" = { fg = "#949494", modifiers = ["bold"] }
+hint = { fg = "#deeeed" }
+info = { fg = "#8cf8f7" }
+keyword = { fg = "#949494" }
+"keyword.control" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.control.return" = { fg = "#535353" }
+"keyword.directive" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.function" = 
+"keyword.operator" = { fg = "#949494", modifiers = ["bold"] }
+label = { fg = "#585858" }
+"markup.bold" = 
+"markup.heading" = { fg = "#585858" }
+"markup.heading.completion" = { bg = "#242424", fg = "#c0c0c0" }
+"markup.heading.hover" = { bg = "#1bfd9c", fg = "#161616", modifiers = ["bold"] }
+"markup.italic" = 
+"markup.link" = { fg = "#a1a1a1" }
+"markup.link.label" = { fg = "#f1f1f1" }
+"markup.link.text" = { fg = "#a1a1a1" }
+"markup.link.url" = { underline = { style = "line" } }
+"markup.list" = { fg = "#404040" }
+"markup.normal.completion" = 
+"markup.normal.hover" = 
+"markup.raw" = { fg = "#b1b1b1" }
+"markup.raw.inline" = 
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+namespace = { fg = "#949494", modifiers = ["bold"] }
+operator = { fg = "#1bfd9c", modifiers = ["bold"] }
+special = { fg = "#f1f1f1" }
+string = { fg = "#b1b1b1" }
+"string.regexp" = { fg = "#708090" }
+"string.special" = { fg = "#708090" }
+tag = { fg = "#585858" }
+type = { fg = "#b1b1b1" }
+"type.builtin" = { fg = "#b1b1b1" }
+"type.enum" = { fg = "#b1b1b1" }
+"type.enum.variant" = { fg = "#b1b1b1" }
+"ui.background" = { bg = "bg" }
+"ui.cursor" = { bg = "#c0c0c0", fg = "#1c1c1c" }
+"ui.cursor.match" = { bg = "#4f5258", modifiers = ["bold"], underline = { style = "line" } }
+"ui.linenr" = { fg = "#404040" }
+"ui.linenr.select" = { fg = "#b1b1b1" }
+"ui.menu" = { bg = "#242424", fg = "#c0c0c0" }
+"ui.menu.scroll" = { bg = 3158064, fg = 5789784 }
+"ui.menu.selected" = { bg = "#1bfd9c", fg = "#161616", modifiers = ["bold"] }
+"ui.popup" = { fg = "#404040" }
+"ui.selection" = { bg = "bg_highlight" }
+"ui.statusline" = { bg = "#212121", fg = "#a1a1a1" }
+"ui.statusline.inactive" = { bg = "#212121", fg = "#404040" }
+"ui.statusline.normal" = { bg = "blue", fg = "black" }
+"ui.text" = { bg = "#1c1c1c", fg = "#c0c0c0" }
+"ui.text.focus" = { bg = "#313131" }
+"ui.text.inactive" = { fg = "#585858", modifiers = ["italic"] }
+"ui.text.info" = { fg = "#c0c0c0" }
+"ui.virtual.inlay-hint" = { bg = "#2f3131", fg = "#deeeed" }
+"ui.window" = { fg = "#404040" }
+variable = { fg = "#d1d1d1" }
+"variable.builtin" = { fg = "#585858" }
+"variable.other.member" = { fg = "#b1b1b1" }
+"variable.parameter" = { fg = "#777777" }
+warning = { fg = "#fce094" }
+
+[palette]
+bg = "#1c1c1c"
+bg_menu = "#242424"
+bg_popup = "#232323"
+bg_statusline = "#212121"
+black = "#161616"
+blue1 = "#b2d8d8"
+blue2 = "#66b2b2"
+border = "#404040"
+"cmp.deprecated" = "#404040"
+"cmp.kind" = "#b1b1b1"
+"cmp.snippet" = "#708090"
+cur_line = "#292929"
+cur_line_nr = "#b1b1b1"
+"diff.add" = "#7ba484"
+"diff.change" = "#a1a1a1"
+"diff.delete" = "#a4777b"
+"diff.text" = "#585858"
+error = "#ffc0b9"
+fg = "#c0c0c0"
+fg_gutter = "#404040"
+fg_sidebar = "#a1a1a1"
+"fs.binary_data" = "#a1a1a1"
+"fs.dir" = "#b1b1b1"
+"fs.exec" = "#66b2b2"
+"fs.file" = "#d1d1d1"
+"fs.link" = "#deeeed"
+"fs.socket" = "#a1a1a1"
+"git.add" = "#baffc9"
+"git.change" = "#ffffba"
+"git.delete" = "#ffb3ba"
+glow = "#1bfd9c"
+gray1 = "#1e1e1e"
+gray10 = "#f1f1f1"
+gray2 = "#2a2a2a"
+gray3 = "#303030"
+gray4 = "#404040"
+gray5 = "#585858"
+gray6 = "#a1a1a1"
+gray7 = "#b1b1b1"
+gray8 = "#d1d1d1"
+gray9 = "#e1e1e1"
+hint = "#deeeed"
+icon = "#585858"
+info = "#8cf8f7"
+lack = "#708090"
+light_blue = "#a6dbff"
+light_cyan = "#8cf8f7"
+light_green = "#b3f6c0"
+light_magenta = "#ffcaff"
+light_red = "#ffc0b9"
+light_yellow = "#fce094"
+lsp_ref = "#2e2e2e"
+luster = "#deeeed"
+selection = "#292929"
+"special.comment" = "#585858"
+"special.exception" = "#535353"
+"special.keyword" = "#949494"
+"special.param" = "#777777"
+"special.property" = "#939393"
+"special.whitespace" = "#414141"
+"syntax.boolean" = "#66b2b2"
+"syntax.builtin" = "#585858"
+"syntax.comment" = "#585858"
+"syntax.const" = "#b1b1b1"
+"syntax.const_builtin" = "#a1a1a1"
+"syntax.func_call" = "#a1a1a1"
+"syntax.func_def" = "#d1d1d1"
+"syntax.func_param" = "#777777"
+"syntax.keyword" = "#949494"
+"syntax.keyword_exception" = "#535353"
+"syntax.keyword_return" = "#535353"
+"syntax.property" = "#939393"
+"syntax.punctuation" = "#d1d1d1"
+"syntax.special" = "#f1f1f1"
+"syntax.string" = "#b1b1b1"
+"syntax.string_escape" = "#708090"
+"syntax.tag" = "#585858"
+"syntax.type" = "#b1b1b1"
+"syntax.type_def" = "#d1d1d1"
+"syntax.type_primitive" = "#b1b1b1"
+"syntax.var" = "#d1d1d1"
+"syntax.var_member" = "#b1b1b1"
+"terminal.black" = "#303030"
+"terminal.black_bright" = "#4d4d4d"
+"terminal.blue" = "#a1a1a1"
+"terminal.blue_bright" = "#b1b1b1"
+"terminal.cyan" = "#d1d1d1"
+"terminal.cyan_bright" = "#d7d7d7"
+"terminal.green" = "#1bfd9c"
+"terminal.green_bright" = "#a6ffc9"
+"terminal.magenta" = "#66b2b2"
+"terminal.magenta_bright" = "#49c4c4"
+"terminal.red" = "#deeeed"
+"terminal.red_bright" = "#708090"
+"terminal.white" = "#f1f1f1"
+"terminal.white_bright" = "#ffffff"
+"terminal.yellow" = "#bababa"
+"terminal.yellow_bright" = "#e1e1e1"
+title = "#585858"
+todo = "#708090"
+visual = "#313131"
+warning = "#fce094"
+white = "#ffffff"
