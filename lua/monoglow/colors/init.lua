@@ -103,10 +103,11 @@ function M.setup(opts)
   }
 
   colors.error = colors.light_red
-  colors.warning = colors.light_yellow
-  colors.info = colors.light_cyan
   colors.hint = colors.luster
+  colors.info = colors.light_cyan
+  colors.ok = colors.light_green
   colors.todo = colors.lack
+  colors.warning = colors.light_yellow
 
   -- NOTE:
   -- inspirated from

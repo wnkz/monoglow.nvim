@@ -12,14 +12,17 @@ hi DevIconDefault guibg=NONE guifg=#555555
 hi DiagnosticError guibg=NONE guifg=#ffc0b9
 hi DiagnosticHint guibg=NONE guifg=#deeeed
 hi DiagnosticInfo guibg=NONE guifg=#8cf8f7
+hi DiagnosticOk guibg=NONE guifg=#b3f6c0
 hi DiagnosticUnderlineError gui=undercurl guibg=NONE guisp=#ffc0b9
 hi DiagnosticUnderlineHint gui=undercurl guibg=NONE guisp=#deeeed
 hi DiagnosticUnderlineInfo gui=undercurl guibg=NONE guisp=#8cf8f7
+hi DiagnosticUnderlineOk gui=undercurl guibg=NONE guisp=#b3f6c0
 hi DiagnosticUnderlineWarn gui=undercurl guibg=NONE guisp=#fce094
 hi DiagnosticUnnecessary guibg=NONE guifg=#cccccc
 hi DiagnosticVirtualTextError guibg=#282221 guifg=#ffc0b9
 hi DiagnosticVirtualTextHint guibg=#252626 guifg=#deeeed
 hi DiagnosticVirtualTextInfo guibg=#1c2727 guifg=#8cf8f7
+hi DiagnosticVirtualTextOk guibg=#202722 guifg=#b3f6c0
 hi DiagnosticVirtualTextWarn guibg=#28251d guifg=#fce094
 hi DiagnosticWarn guibg=NONE guifg=#fce094
 hi DiffAdd guibg=#769f7f guifg=#101010
