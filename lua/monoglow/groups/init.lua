@@ -16,6 +16,7 @@ M.plugins = {
   ["dashboard-nvim"] = "dashboard",
   ["flash.nvim"] = "flash",
   ["gitsigns.nvim"] = "gitsigns",
+  ["indent-blankline.nvim"] = "indent-blankline",
   ["markview.nvim"] = "markview",
   ["mason.nvim"] = "mason",
   ["neo-tree.nvim"] = "neo-tree",
