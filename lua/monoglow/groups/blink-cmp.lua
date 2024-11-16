@@ -10,6 +10,9 @@ function M.get(c, opts)
     BlinkCmpLabelMatch = { fg = c.blue2 },
     BlinkCmpLabelDeprecated = { fg = c.cmp.deprecated, bg = c.none, strikethrough = true },
     BlinkCmpMenu = { fg = c.comment, bg = c.none },
+    BlinkCmpMenuBorder = { fg = c.border, bg = c.none },
+    BlinkCmpDocBorder = { fg = c.border, bg = c.none },
+    BlinkCmpSignatureHelpBorder = { fg = c.border, bg = c.none }
   }
 
   require("monoglow.groups.kinds").kinds(ret, "BlinkCmpKind%s")
