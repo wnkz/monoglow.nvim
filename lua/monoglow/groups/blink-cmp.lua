@@ -12,7 +12,7 @@ function M.get(c)
     BlinkCmpMenu = { fg = c.comment, bg = c.none },
     BlinkCmpMenuBorder = { fg = c.border, bg = c.none },
     BlinkCmpDocBorder = { fg = c.border, bg = c.none },
-    BlinkCmpSignatureHelpBorder = { fg = c.border, bg = c.none }
+    BlinkCmpSignatureHelpBorder = { fg = c.border, bg = c.none },
   }
 
   require("monoglow.groups.kinds").kinds(ret, "BlinkCmpKind%s")
