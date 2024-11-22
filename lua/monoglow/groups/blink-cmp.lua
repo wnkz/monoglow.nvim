@@ -2,7 +2,7 @@ local M = {}
 
 M.url = "https://github.com/Saghen/blink.cmp"
 
-function M.get(c, opts)
+function M.get(c)
   local ret = {
     BlinkCmpKind = { fg = c.cmp.kind },
     BlinkCmpGhostText = { fg = c.exception },
