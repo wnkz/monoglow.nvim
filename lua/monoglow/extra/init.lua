@@ -15,6 +15,7 @@ local M = {}
 -- map of plugin name to plugin extension
 --- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string}>
 M.extras = {
+  ghostty = { ext = "", url = "https://ghostty.org/docs/features/theme", label = "Ghostty" },
   kitty = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },

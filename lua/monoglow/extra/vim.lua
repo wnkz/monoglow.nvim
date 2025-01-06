@@ -16,6 +16,10 @@ local mapping = {
   sp = "guisp",
 }
 
+local excluded_plugins = {
+  "blink.cmp",
+}
+
 --- @param colors ColorScheme
 --- @param groups monoglow.Highlights
 --- @param opts monoglow.Config
@@ -23,7 +27,7 @@ function M.generate(colors, groups, opts)
   opts.plugins = { all = false, auto = false, treesitter = false }
   local Groups = require("monoglow.groups")
   for p, n in pairs(Groups.plugins) do
-    if not p:find("nvim") then
+    if not p:find("nvim") and not vim.tbl_contains(excluded_plugins, p) then
       opts.plugins[n] = true
     end
   end
