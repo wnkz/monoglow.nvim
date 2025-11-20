@@ -19,6 +19,7 @@ M.extras = {
   kitty = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
+  vscode = { ext = "json", url = "https://code.visualstudio.com/", label = "VS Code", subdir = "themes", sep = "-" },
 }
 
 function M.setup()
