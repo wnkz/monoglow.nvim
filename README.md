@@ -19,13 +19,38 @@ A dark, mostly monochrome colorscheme with a touch of glowing.
 > Currently available Plugins and Extras are mostly based on what I use but feel free
 > to open an issue or a PR to suggest a new one!
 
-### 🎨 Supported Plugins
+<details>
+<summary>🎨 Supported Plugins</summary>
 
-Have a look at [this file](lua/monoglow/groups/init.lua) while I'll probably reuse what [folke](https://github.com/folke) did to keep the table up-to-date.
+| Plugin | Source |
+| --- | --- |
+| [blink.cmp](https://github.com/Saghen/blink.cmp) | [`blink-cmp`](lua/monoglow/groups/blink-cmp.lua) |
+| [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | [`dashboard`](lua/monoglow/groups/dashboard.lua) |
+| [flash.nvim](https://github.com/folke/flash.nvim) | [`flash`](lua/monoglow/groups/flash.lua) |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | [`gitsigns`](lua/monoglow/groups/gitsigns.lua) |
+| [markview.nvim](https://github.com/OXY2DEV/markview.nvim) | [`markview`](lua/monoglow/groups/markview.lua) |
+| [mason.nvim](https://github.com/williamboman/mason.nvim) | [`mason`](lua/monoglow/groups/mason.lua) |
+| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | [`neo-tree`](lua/monoglow/groups/neo-tree.lua) |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/monoglow/groups/cmp.lua) |
+| [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker) | [`nvim-window-picker`](lua/monoglow/groups/nvim-window-picker.lua) |
+| [oil.nvim](https://github.com/stevearc/oil.nvim) | [`oil`](lua/monoglow/groups/oil.lua) |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | [`telescope`](lua/monoglow/groups/telescope.lua) |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | [`which-key`](lua/monoglow/groups/which-key.lua) |
 
-### 🍭 Extras
+</details>
 
-Have a look at [this file](lua/monoglow/extra/init.lua) while I'll probably reuse what [folke](https://github.com/folke) did to keep the table up-to-date.
+<details>
+<summary>🍭 Extras</summary>
+
+| Tool | Extra |
+| --- | --- |
+| [Ghostty](https://ghostty.org/docs/features/theme) | [extras/ghostty](extras/ghostty) |
+| [Helix](https://helix-editor.com/) | [extras/helix](extras/helix) |
+| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty) |
+| [Vim](https://vimhelp.org/) | [extras/vim](extras/vim) |
+| [VS Code](https://code.visualstudio.com/) | [extras/vscode](extras/vscode) |
+
+</details>
 
 ## 📦 Installation
 
@@ -67,9 +92,10 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[z](extras/lua/monoglow_z.lua),
-[lack](extras/lua/monoglow_moon.lua), and
-[void](extras/lua/monoglow_night.lua) themes.
+[z](lua/monoglow/colors/z.lua),
+[lack](lua/monoglow/colors/lack.lua), and
+[void](lua/monoglow/colors/void.lua) palettes, as well as the
+[base highlights](lua/monoglow/groups/base.lua).
 
 <details>
   <summary>Changing Colors</summary>
