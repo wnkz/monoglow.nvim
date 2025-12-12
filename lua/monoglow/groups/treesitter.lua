@@ -88,7 +88,8 @@ function M.get(c)
     ["@string.regexp"] = { fg = c.syntax.string_escape }, -- For regexes.
     ["@string.special"] = { fg = c.syntax.string_escape },
     ["@tag"] = { fg = c.syntax.tag },
-    ["@tag.attribute"] = { fg = c.gray4 },
+    ["@tag.attribute"] = { fg = c.gray6 },
+    ["@tag.builtin"] = "@tag",
     ["@tag.delimiter"] = "@tag",
     ["@type"] = "Type",
     ["@type.builtin"] = { fg = c.syntax.type_primitive },

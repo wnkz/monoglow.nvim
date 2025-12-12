@@ -57,7 +57,7 @@ special = { fg = "#f1f1f1" }
 string = { fg = "#aaaaaa" }
 "string.regexp" = { fg = "#708090" }
 "string.special" = { fg = "#708090" }
-tag = { fg = "#555555" }
+tag = { fg = "#aaaaaa" }
 type = { fg = "#aaaaaa" }
 "type.builtin" = { fg = "#aaaaaa" }
 "type.enum" = { fg = "#aaaaaa" }
@@ -165,7 +165,7 @@ selection = "#212121"
 "syntax.special" = "#f1f1f1"
 "syntax.string" = "#aaaaaa"
 "syntax.string_escape" = "#708090"
-"syntax.tag" = "#555555"
+"syntax.tag" = "#aaaaaa"
 "syntax.type" = "#aaaaaa"
 "syntax.type_def" = "#cccccc"
 "syntax.type_primitive" = "#aaaaaa"
