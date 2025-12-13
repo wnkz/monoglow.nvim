@@ -57,7 +57,7 @@ special = { fg = "#f1f1f1" }
 string = { fg = "#b1b1b1" }
 "string.regexp" = { fg = "#708090" }
 "string.special" = { fg = "#708090" }
-tag = { fg = "#585858" }
+tag = { fg = "#b1b1b1" }
 type = { fg = "#b1b1b1" }
 "type.builtin" = { fg = "#b1b1b1" }
 "type.enum" = { fg = "#b1b1b1" }
@@ -165,7 +165,7 @@ selection = "#292929"
 "syntax.special" = "#f1f1f1"
 "syntax.string" = "#b1b1b1"
 "syntax.string_escape" = "#708090"
-"syntax.tag" = "#585858"
+"syntax.tag" = "#b1b1b1"
 "syntax.type" = "#b1b1b1"
 "syntax.type_def" = "#d1d1d1"
 "syntax.type_primitive" = "#b1b1b1"

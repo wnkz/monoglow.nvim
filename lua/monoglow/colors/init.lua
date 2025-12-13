@@ -79,7 +79,7 @@ function M.setup(opts)
     special = colors.gray10,
     string = colors.gray7,
     string_escape = colors.lack,
-    tag = colors.gray5,
+    tag = colors.gray7,
     type = colors.gray7,
     type_def = colors.gray8,
     type_primitive = colors.gray7,
