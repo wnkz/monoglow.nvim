@@ -12,14 +12,17 @@ local M = {}
 
 ---@type monoglow.HighlightsFn
 function M.get(c)
+  -- NOTE: Many TS groups are NOT defined here because Neovim provides sensible
+  -- defaults in highlight_group.c that link to standard Vim groups:
+  --   @boolean → Boolean, @character → Character, @comment → Comment,
+  --   @constant → Constant, @diff.plus → Added, @diff.minus → Removed,
+  --   @diff.delta → Changed, @markup.heading → Title, @number → Number,
+  --   @number.float → Float, @operator → Operator, @string → String, @type → Type
   return {
     ["@annotation"] = "PreProc",
     ["@attribute"] = { fg = c.syntax.keyword },
-    ["@boolean"] = "Boolean",
-    ["@character"] = "Character",
     ["@character.printf"] = "SpecialChar",
     ["@character.special"] = "SpecialChar",
-    ["@comment"] = "Comment",
     ["@comment.documentation"] = "Comment",
     ["@comment.error"] = { fg = c.error },
     ["@comment.hint"] = { fg = c.hint },
@@ -27,13 +30,9 @@ function M.get(c)
     ["@comment.note"] = { fg = c.hint },
     ["@comment.todo"] = { fg = c.todo },
     ["@comment.warning"] = { fg = c.warning },
-    ["@constant"] = "Constant",
     ["@constant.builtin"] = { fg = c.syntax.const_builtin },
     ["@constant.macro"] = "Define",
     ["@constructor"] = "Delimiter", -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@diff.delta"] = "DiffChange",
-    ["@diff.minus"] = "DiffDelete",
-    ["@diff.plus"] = "DiffAdd",
     ["@function"] = { fg = c.syntax.func_def },
     ["@function.builtin"] = { fg = c.syntax.builtin },
     ["@function.call"] = { fg = c.syntax.func_call },
@@ -57,7 +56,6 @@ function M.get(c)
     ["@markup.emphasis"] = { italic = true },
     ["@markup.environment"] = "Macro",
     ["@markup.environment.name"] = "Type",
-    ["@markup.heading"] = "Title",
     ["@markup.italic"] = { italic = true },
     ["@markup.link"] = { fg = c.gray6 },
     ["@markup.link.label"] = "SpecialChar",
@@ -76,14 +74,10 @@ function M.get(c)
     ["@module.builtin"] = { fg = c.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@namespace.builtin"] = "@variable.builtin",
     ["@none"] = {},
-    ["@number"] = "Number",
-    ["@number.float"] = "Float",
-    ["@operator"] = "Operator", -- For any operator: `+`, but also `->` and `*` in C.
     ["@property"] = { fg = c.syntax.property },
     ["@punctuation.bracket"] = "Delimiter", -- For brackets and parens.
     ["@punctuation.delimiter"] = "Delimiter", -- For delimiters ie: `.`
     ["@punctuation.special"] = "Delimiter", -- For special symbols (e.g. `{}` in string interpolation)
-    ["@string"] = "String",
     ["@string.escape"] = { fg = c.syntax.string_escape }, -- For escape characters within a string.
     ["@string.regexp"] = { fg = c.syntax.string_escape }, -- For regexes.
     ["@string.special"] = { fg = c.syntax.string_escape },
@@ -91,7 +85,6 @@ function M.get(c)
     ["@tag.attribute"] = { fg = c.gray6 },
     ["@tag.builtin"] = "@tag",
     ["@tag.delimiter"] = "@tag",
-    ["@type"] = "Type",
     ["@type.builtin"] = { fg = c.syntax.type_primitive },
     ["@type.definition"] = { fg = c.syntax.type_def },
     ["@type.qualifier"] = "@keyword",

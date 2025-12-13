@@ -19,7 +19,7 @@ constructor = { fg = "#b1b1b1" }
 "diff.minus" = 
 "diff.plus" = 
 error = { fg = "#ffc0b9" }
-function = { fg = "#a1a1a1", modifiers = ["bold"] }
+function = { fg = "#d1d1d1", modifiers = ["bold"] }
 "function.builtin" = { fg = "#585858" }
 "function.macro" = { fg = "#949494", modifiers = ["bold"] }
 "function.method" = { fg = "#d1d1d1" }
@@ -64,7 +64,7 @@ type = { fg = "#b1b1b1" }
 "type.enum.variant" = { fg = "#b1b1b1" }
 "ui.background" = { bg = "bg" }
 "ui.cursor" = { bg = "#c0c0c0", fg = "#1c1c1c" }
-"ui.cursor.match" = { bg = "#4f5258", modifiers = ["bold"], underline = { style = "line" } }
+"ui.cursor.match" = { fg = "#1bfd9c", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#404040" }
 "ui.linenr.select" = { fg = "#b1b1b1" }
 "ui.menu" = { bg = "#242424", fg = "#c0c0c0" }

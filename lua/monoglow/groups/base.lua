@@ -69,7 +69,7 @@ function M.get(c, opts)
     -- syntax
     Conditional = "Keyword",
     Exception = "Keyword",
-    Function = { fg = c.syntax.func_call, bold = opts.glow }, -- function name (also: methods for classes)
+    Function = { fg = c.syntax.func_def, bold = opts.glow }, -- function name (also: methods for classes)
     Identifier = { fg = c.syntax.type, bold = opts.glow }, -- (preferred) any variable name
     Keyword = { fg = c.syntax.keyword, bold = opts.glow }, --  any other keyword
     Label = "Keyword",
@@ -101,7 +101,7 @@ function M.get(c, opts)
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticOk = { fg = c.ok }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticUnnecessary = { fg = c.fg }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticUnnecessary = { fg = util.blend(c.fg, 0.4, c.bg), strikethrough = true }, -- dimmed + strikethrough for unused code
     DiagnosticWarn = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
     DiagnosticVirtualTextError = { bg = util.blend_bg(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
@@ -118,6 +118,41 @@ function M.get(c, opts)
 
     -- webdevicon
     DevIconDefault = { fg = c.icon },
+
+    -- syntax:preproc (for non-TS users)
+    Structure = "Type",
+    StorageClass = "Keyword",
+    Typedef = "Type",
+    Include = "Keyword",
+    Define = "Keyword",
+    Macro = "Keyword",
+    PreCondit = "Keyword",
+
+    -- syntax:special (for non-TS users)
+    SpecialChar = "Special",
+    Tag = "Special",
+    Debug = "Special",
+    SpecialComment = "Special",
+
+    -- syntax:misc (for non-TS users)
+    Underlined = { underline = true },
+    Ignore = { fg = c.gray3 },
+    Error = { fg = c.error },
+    Todo = { fg = c.todo, bold = true },
+
+    -- diff:standard (used by @diff.plus/minus/delta via Nvim defaults)
+    Added = { fg = c.diff.add },
+    Changed = { fg = c.diff.change },
+    Removed = { fg = c.diff.delete },
+
+    -- editor:matching
+    MatchParen = { fg = c.glow, bold = true },
+
+    -- editor:spell
+    SpellBad = { undercurl = true, sp = c.error },
+    SpellCap = { undercurl = true, sp = c.warning },
+    SpellRare = { undercurl = true, sp = c.info },
+    SpellLocal = { undercurl = true, sp = c.hint },
   }
 end
 

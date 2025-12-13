@@ -19,7 +19,7 @@ constructor = { fg = "#aaaaaa" }
 "diff.minus" = 
 "diff.plus" = 
 error = { fg = "#ffc0b9" }
-function = { fg = "#7a7a7a", modifiers = ["bold"] }
+function = { fg = "#cccccc", modifiers = ["bold"] }
 "function.builtin" = { fg = "#555555" }
 "function.macro" = { fg = "#727272", modifiers = ["bold"] }
 "function.method" = { fg = "#cccccc" }
@@ -64,7 +64,7 @@ type = { fg = "#aaaaaa" }
 "type.enum.variant" = { fg = "#aaaaaa" }
 "ui.background" = { bg = "bg" }
 "ui.cursor" = { bg = "#cccccc", fg = "#101010" }
-"ui.cursor.match" = { bg = "#4f5258", modifiers = ["bold"], underline = { style = "line" } }
+"ui.cursor.match" = { fg = "#1bfd9c", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#444444" }
 "ui.linenr.select" = { fg = "#aaaaaa" }
 "ui.menu" = { bg = "#191919", fg = "#cccccc" }
