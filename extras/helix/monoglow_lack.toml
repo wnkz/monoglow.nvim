@@ -20,7 +20,7 @@ constructor = { fg = "#aaaaaa" }
 "diff.plus" = 
 error = { fg = "#ffc0b9" }
 function = { fg = "#cccccc", modifiers = ["bold"] }
-"function.builtin" = { fg = "#555555" }
+"function.builtin" = { fg = "#646464" }
 "function.macro" = { fg = "#727272", modifiers = ["bold"] }
 "function.method" = { fg = "#cccccc" }
 "function.special" = { fg = "#727272", modifiers = ["bold"] }
@@ -31,13 +31,13 @@ keyword = { fg = "#727272" }
 "keyword.control.conditional" = { fg = "#727272", modifiers = ["bold"] }
 "keyword.control.exception" = { fg = "#727272", modifiers = ["bold"] }
 "keyword.control.repeat" = { fg = "#727272", modifiers = ["bold"] }
-"keyword.control.return" = { fg = "#505050" }
+"keyword.control.return" = { fg = "#6c6c6c", modifiers = ["bold"] }
 "keyword.directive" = { fg = "#727272", modifiers = ["bold"] }
 "keyword.function" = 
 "keyword.operator" = { fg = "#727272", modifiers = ["bold"] }
-label = { fg = "#555555" }
+label = { fg = "#7a7a7a" }
 "markup.bold" = 
-"markup.heading" = { fg = "#555555" }
+"markup.heading" = { fg = "#7a7a7a" }
 "markup.heading.completion" = { bg = "#191919", fg = "#cccccc" }
 "markup.heading.hover" = { bg = "#1bfd9c", fg = "#0d0d0d", modifiers = ["bold"] }
 "markup.italic" = 
@@ -82,7 +82,7 @@ type = { fg = "#aaaaaa" }
 "ui.virtual.inlay-hint" = { bg = "#252626", fg = "#deeeed" }
 "ui.window" = { fg = "#444444" }
 variable = { fg = "#cccccc" }
-"variable.builtin" = { fg = "#555555" }
+"variable.builtin" = { fg = "#6f6f6f" }
 "variable.other.member" = { fg = "#aaaaaa" }
 "variable.parameter" = { fg = "#8e8e8e" }
 warning = { fg = "#fce094" }
@@ -130,7 +130,7 @@ gray7 = "#aaaaaa"
 gray8 = "#cccccc"
 gray9 = "#dddddd"
 hint = "#deeeed"
-icon = "#555555"
+icon = "#7a7a7a"
 info = "#8cf8f7"
 lack = "#708090"
 light_blue = "#a6dbff"
@@ -150,7 +150,7 @@ selection = "#1f1f1f"
 "special.property" = "#8b8b8b"
 "special.whitespace" = "#202020"
 "syntax.boolean" = "#66b2b2"
-"syntax.builtin" = "#555555"
+"syntax.builtin" = "#646464"
 "syntax.comment" = "#474747"
 "syntax.const" = "#aaaaaa"
 "syntax.const_builtin" = "#7a7a7a"
@@ -159,7 +159,7 @@ selection = "#1f1f1f"
 "syntax.func_param" = "#8e8e8e"
 "syntax.keyword" = "#727272"
 "syntax.keyword_exception" = "#505050"
-"syntax.keyword_return" = "#505050"
+"syntax.keyword_return" = "#6c6c6c"
 "syntax.property" = "#8b8b8b"
 "syntax.punctuation" = "#cccccc"
 "syntax.special" = "#f1f1f1"
@@ -170,6 +170,7 @@ selection = "#1f1f1f"
 "syntax.type_def" = "#cccccc"
 "syntax.type_primitive" = "#aaaaaa"
 "syntax.var" = "#cccccc"
+"syntax.var_builtin" = "#6f6f6f"
 "syntax.var_member" = "#aaaaaa"
 "terminal.black" = "#2a2a2a"
 "terminal.black_bright" = "#4a4a4a"
@@ -187,7 +188,7 @@ selection = "#1f1f1f"
 "terminal.white_bright" = "#ffffff"
 "terminal.yellow" = "#b4b4b4"
 "terminal.yellow_bright" = "#dddddd"
-title = "#555555"
+title = "#7a7a7a"
 todo = "#708090"
 visual = "#282828"
 warning = "#fce094"

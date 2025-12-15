@@ -20,7 +20,7 @@ constructor = { fg = "#b1b1b1" }
 "diff.plus" = 
 error = { fg = "#ffc0b9" }
 function = { fg = "#d1d1d1", modifiers = ["bold"] }
-"function.builtin" = { fg = "#585858" }
+"function.builtin" = { fg = "#666666" }
 "function.macro" = { fg = "#949494", modifiers = ["bold"] }
 "function.method" = { fg = "#d1d1d1" }
 "function.special" = { fg = "#949494", modifiers = ["bold"] }
@@ -31,13 +31,13 @@ keyword = { fg = "#949494" }
 "keyword.control.conditional" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.exception" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.repeat" = { fg = "#949494", modifiers = ["bold"] }
-"keyword.control.return" = { fg = "#535353" }
+"keyword.control.return" = { fg = "#6c6c6c", modifiers = ["bold"] }
 "keyword.directive" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.function" = 
 "keyword.operator" = { fg = "#949494", modifiers = ["bold"] }
-label = { fg = "#585858" }
+label = { fg = "#a1a1a1" }
 "markup.bold" = 
-"markup.heading" = { fg = "#585858" }
+"markup.heading" = { fg = "#a1a1a1" }
 "markup.heading.completion" = { bg = "#242424", fg = "#c0c0c0" }
 "markup.heading.hover" = { bg = "#1bfd9c", fg = "#161616", modifiers = ["bold"] }
 "markup.italic" = 
@@ -82,7 +82,7 @@ type = { fg = "#b1b1b1" }
 "ui.virtual.inlay-hint" = { bg = "#2f3131", fg = "#deeeed" }
 "ui.window" = { fg = "#404040" }
 variable = { fg = "#d1d1d1" }
-"variable.builtin" = { fg = "#585858" }
+"variable.builtin" = { fg = "#949494" }
 "variable.other.member" = { fg = "#b1b1b1" }
 "variable.parameter" = { fg = "#777777" }
 warning = { fg = "#fce094" }
@@ -130,7 +130,7 @@ gray7 = "#b1b1b1"
 gray8 = "#d1d1d1"
 gray9 = "#e1e1e1"
 hint = "#deeeed"
-icon = "#585858"
+icon = "#a1a1a1"
 info = "#8cf8f7"
 lack = "#708090"
 light_blue = "#a6dbff"
@@ -144,13 +144,13 @@ luster = "#deeeed"
 ok = "#b3f6c0"
 selection = "#292929"
 "special.comment" = "#585858"
-"special.exception" = "#535353"
+"special.exception" = "#626262"
 "special.keyword" = "#949494"
 "special.param" = "#777777"
 "special.property" = "#939393"
 "special.whitespace" = "#414141"
 "syntax.boolean" = "#66b2b2"
-"syntax.builtin" = "#585858"
+"syntax.builtin" = "#666666"
 "syntax.comment" = "#585858"
 "syntax.const" = "#b1b1b1"
 "syntax.const_builtin" = "#a1a1a1"
@@ -158,8 +158,8 @@ selection = "#292929"
 "syntax.func_def" = "#d1d1d1"
 "syntax.func_param" = "#777777"
 "syntax.keyword" = "#949494"
-"syntax.keyword_exception" = "#535353"
-"syntax.keyword_return" = "#535353"
+"syntax.keyword_exception" = "#626262"
+"syntax.keyword_return" = "#6c6c6c"
 "syntax.property" = "#939393"
 "syntax.punctuation" = "#d1d1d1"
 "syntax.special" = "#f1f1f1"
@@ -170,6 +170,7 @@ selection = "#292929"
 "syntax.type_def" = "#d1d1d1"
 "syntax.type_primitive" = "#b1b1b1"
 "syntax.var" = "#d1d1d1"
+"syntax.var_builtin" = "#949494"
 "syntax.var_member" = "#b1b1b1"
 "terminal.black" = "#303030"
 "terminal.black_bright" = "#4d4d4d"
@@ -187,7 +188,7 @@ selection = "#292929"
 "terminal.white_bright" = "#ffffff"
 "terminal.yellow" = "#bababa"
 "terminal.yellow_bright" = "#e1e1e1"
-title = "#585858"
+title = "#a1a1a1"
 todo = "#708090"
 visual = "#313131"
 warning = "#fce094"

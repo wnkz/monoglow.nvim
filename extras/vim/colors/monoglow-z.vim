@@ -4,13 +4,13 @@ hi clear
 hi Added guibg=NONE guifg=#77a080
 hi Boolean guibg=NONE guifg=#66b2b2
 hi Changed guibg=NONE guifg=#7a7a7a
-hi Comment gui=italic guibg=NONE guifg=#424242
+hi Comment gui=italic guibg=NONE guifg=#585858
 hi Constant guibg=NONE guifg=#aaaaaa
 hi Cursor guibg=#cccccc guifg=#121212
 hi CursorLine guibg=#212121
 hi CursorLineNr guibg=NONE guifg=#aaaaaa
 hi Delimiter guibg=NONE guifg=#cccccc
-hi DevIconDefault guibg=NONE guifg=#555555
+hi DevIconDefault guibg=NONE guifg=#7a7a7a
 hi DiagnosticError guibg=NONE guifg=#ffc0b9
 hi DiagnosticHint guibg=NONE guifg=#deeeed
 hi DiagnosticInfo guibg=NONE guifg=#8cf8f7
@@ -20,7 +20,6 @@ hi DiagnosticUnderlineHint gui=undercurl guibg=NONE guisp=#deeeed
 hi DiagnosticUnderlineInfo gui=undercurl guibg=NONE guisp=#8cf8f7
 hi DiagnosticUnderlineOk gui=undercurl guibg=NONE guisp=#b3f6c0
 hi DiagnosticUnderlineWarn gui=undercurl guibg=NONE guisp=#fce094
-hi DiagnosticUnnecessary gui=strikethrough guibg=NONE guifg=#5c5c5c
 hi DiagnosticVirtualTextError guibg=#2a2323 guifg=#ffc0b9
 hi DiagnosticVirtualTextHint guibg=#262828 guifg=#deeeed
 hi DiagnosticVirtualTextInfo guibg=#1e2929 guifg=#8cf8f7
@@ -35,7 +34,7 @@ hi Directory guibg=NONE guifg=#aaaaaa
 hi EndOfBuffer guibg=NONE guifg=#121212
 hi Error guibg=NONE guifg=#ffc0b9
 hi FloatBorder guibg=#1a1a1a guifg=#444444
-hi FloatTitle guibg=NONE guifg=#555555
+hi FloatTitle guibg=NONE guifg=#7a7a7a
 hi FoldColumn guibg=NONE guifg=#444444
 hi Folded guibg=NONE guifg=#444444
 hi Function gui=bold guibg=NONE guifg=#cccccc
@@ -65,7 +64,7 @@ hi SpellRare gui=undercurl guibg=NONE guisp=#8cf8f7
 hi StatusLine guibg=#181818 guifg=#7a7a7a
 hi StatusLineNC guibg=#181818 guifg=#444444
 hi String guibg=NONE guifg=#aaaaaa
-hi Title guibg=NONE guifg=#555555
+hi Title guibg=NONE guifg=#7a7a7a
 hi Todo gui=bold guibg=NONE guifg=#708090
 hi Type guibg=NONE guifg=#aaaaaa
 hi Underlined gui=underline guibg=NONE

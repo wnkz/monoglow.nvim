@@ -251,7 +251,7 @@
         "keyword.control.flow.return"
       ],
       "settings": {
-        "foreground": "#505050"
+        "foreground": "#6c6c6c"
       }
     },
     {
@@ -421,7 +421,7 @@
         "markup.heading"
       ],
       "settings": {
-        "foreground": "#555555",
+        "foreground": "#7a7a7a",
         "fontStyle": "bold"
       }
     },
