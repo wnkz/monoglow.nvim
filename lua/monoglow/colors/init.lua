@@ -18,15 +18,48 @@ function M.setup(opts)
     palette = palette(opts) --[[@as Palette]]
   end
 
-  -- Color Palette
   ---@class ColorScheme: Palette
+  ---@field none string Special value for transparent/no color
+  ---@field black string Darkened background for contrast
+  -- UI backgrounds
+  ---@field bg_menu string Background for menus
+  ---@field bg_popup string Background for popups/floats
+  ---@field bg_statusline string Background for statusline
+  ---@field border string Border color for windows/floats
+  ---@field fg_sidebar string Foreground for sidebars
+  ---@field fg_gutter string Foreground for gutter (signs, line numbers)
+  -- Cursor and selection
+  ---@field cur_line string Background for CursorLine
+  ---@field cur_line_nr string Foreground for CursorLineNr
+  ---@field lsp_ref string Background for LSP references
+  ---@field visual string Background for Visual selection
+  ---@field selection string Background for selections (e.g., Telescope)
+  -- Semantic colors
+  ---@field icon string Color for icons
+  ---@field title string Color for titles
+  -- Diagnostics
+  ---@field error string Diagnostic error color
+  ---@field warning string Diagnostic warning color
+  ---@field info string Diagnostic info color
+  ---@field hint string Diagnostic hint color
+  ---@field ok string Diagnostic ok color
+  ---@field todo string TODO comment color
+  -- Tables
+  ---@field diff table Diff colors (add, delete, change, text)
+  ---@field special table Special syntax colors (comment, exception, keyword, param, property, whitespace)
+  ---@field syntax table Syntax highlighting colors
+  ---@field fs table Filesystem colors for file explorers
+  ---@field cmp table Completion menu colors
+  ---@field terminal TerminalColors Terminal palette
   local colors = palette
 
   util.bg = colors.bg
   util.fg = colors.fg
 
+  -- Special value
   colors.none = "NONE"
 
+  -- Diff colors (for inline diffs)
   colors.diff = {
     add = util.darken(colors.git.add, 0.60),
     delete = util.darken(colors.git.delete, 0.60),
@@ -34,37 +67,41 @@ function M.setup(opts)
     text = colors.gray5,
   }
 
+  -- UI backgrounds
   colors.black = util.blend_bg(colors.bg, 0.8, "#000000")
-
   colors.bg_menu = util.lighten(colors.bg, 0.95)
   colors.bg_popup = util.lighten(colors.bg, 0.955)
+  colors.bg_statusline = util.lighten(colors.bg, 0.97)
   colors.border = colors.gray4
   colors.fg_sidebar = colors.gray6
   colors.fg_gutter = colors.gray4
-  colors.bg_statusline = util.lighten(colors.bg, 0.97)
 
+  -- Cursor and selection
   colors.cur_line = util.lighten(colors.bg, 0.92)
   colors.cur_line_nr = colors.gray7
   colors.lsp_ref = util.lighten(colors.cur_line, 0.97)
   colors.visual = util.lighten(colors.cur_line, 0.95)
   colors.selection = colors.cur_line
 
+  -- Special syntax overrides (can be partially defined in palette)
   colors.special = colors.special or {}
   colors.special = vim.tbl_deep_extend("keep", colors.special, {
-    comment = util.darken(colors.gray4, 0.95),
-    exception = util.darken(colors.gray5, 0.92),
+    comment = util.lighten(colors.gray4, 0.85),
+    exception = util.lighten(colors.gray5, 0.90),
     keyword = util.darken(colors.gray6, 0.90),
     param = util.lighten(colors.gray5, 0.70),
     property = util.darken(colors.gray7, 0.80),
     whitespace = util.lighten(colors.gray2, 0.85),
   })
 
-  colors.icon = colors.gray5
-  colors.title = colors.gray5
+  -- Semantic UI colors
+  colors.icon = colors.gray6
+  colors.title = colors.gray6
 
+  -- Syntax highlighting
   colors.syntax = {
     boolean = colors.blue2,
-    builtin = colors.gray5,
+    builtin = util.lighten(colors.gray5, 0.87),
     comment = colors.special.comment,
     const = colors.gray7,
     const_builtin = colors.gray6,
@@ -73,7 +110,7 @@ function M.setup(opts)
     func_param = colors.special.param,
     keyword = colors.special.keyword,
     keyword_exception = colors.special.exception,
-    keyword_return = colors.special.exception,
+    keyword_return = util.lighten(colors.gray5, 0.81),
     property = colors.special.property,
     punctuation = colors.gray8,
     special = colors.gray10,
@@ -84,9 +121,11 @@ function M.setup(opts)
     type_def = colors.gray8,
     type_primitive = colors.gray7,
     var = colors.gray8,
+    var_builtin = util.darken(colors.gray6, 0.90),
     var_member = colors.gray7,
   }
 
+  -- Filesystem colors (for neo-tree, oil, etc.)
   colors.fs = {
     dir = colors.gray7,
     file = colors.gray8,
@@ -96,12 +135,14 @@ function M.setup(opts)
     socket = colors.gray6,
   }
 
+  -- Completion menu colors
   colors.cmp = {
     kind = colors.gray7,
     snippet = colors.lack,
     deprecated = colors.gray4,
   }
 
+  -- Diagnostics
   colors.error = colors.light_red
   colors.hint = colors.luster
   colors.info = colors.light_cyan
@@ -109,9 +150,8 @@ function M.setup(opts)
   colors.todo = colors.lack
   colors.warning = colors.light_yellow
 
-  -- NOTE:
-  -- inspirated from
-  -- https://github.com/PieterHeijman/terminal-color-themes/blob/master/movies/Psycho.json
+  -- Terminal colors
+  -- Inspired by https://github.com/PieterHeijman/terminal-color-themes/blob/master/movies/Psycho.json
   ---@class TerminalColors
   colors.terminal = {
     black = colors.gray3,
