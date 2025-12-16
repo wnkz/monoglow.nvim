@@ -13,13 +13,14 @@ local util = require("monoglow.util")
 local M = {}
 
 -- map of plugin name to plugin extension
---- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string}>
+--- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string, all_styles?:boolean}>
 M.extras = {
   ghostty = { ext = "", url = "https://ghostty.org/docs/features/theme", label = "Ghostty" },
   kitty = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   vscode = { ext = "json", url = "https://code.visualstudio.com/", label = "VS Code", subdir = "themes", sep = "-" },
+  zed = { ext = "json", url = "https://zed.dev/", label = "Zed", all_styles = true },
 }
 
 function M.setup()
@@ -41,22 +42,39 @@ function M.setup()
   for _, extra in ipairs(names) do
     local info = M.extras[extra]
     local plugin = require("monoglow.extra." .. extra)
-    for style, style_name in pairs(styles) do
-      local colors, groups, opts = monoglow.load({ style = style, plugins = { all = true } })
-      local fname = extra
-        .. (info.subdir and "/" .. info.subdir or "")
-        .. "/monoglow"
-        .. (info.sep or "_")
-        .. style
-        .. "."
-        .. info.ext
-      fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
-      colors["_upstream_url"] = "https://github.com/wnkz/monoglow.nvim/raw/main/extras/" .. fname
-      colors["_style_name"] = "Mono Glow" .. style_name
-      colors["_name"] = "monoglow_" .. style
-      colors["_style"] = style
+
+    if info.all_styles then
+      -- For extras that generate all styles in a single file (e.g., Zed)
+      local all_colors = {}
+      for style, style_name in pairs(styles) do
+        local colors, _, _ = monoglow.load({ style = style, plugins = { all = true } })
+        colors["_style_name"] = "Mono Glow" .. style_name
+        colors["_name"] = "monoglow_" .. style
+        colors["_style"] = style
+        all_colors[style] = colors
+      end
+      local fname = extra .. "/monoglow." .. info.ext
       print("[write] " .. fname)
-      util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
+      util.write("extras/" .. fname, plugin.generate(all_colors))
+    else
+      -- Standard per-style generation
+      for style, style_name in pairs(styles) do
+        local colors, groups, opts = monoglow.load({ style = style, plugins = { all = true } })
+        local fname = extra
+          .. (info.subdir and "/" .. info.subdir or "")
+          .. "/monoglow"
+          .. (info.sep or "_")
+          .. style
+          .. "."
+          .. info.ext
+        fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
+        colors["_upstream_url"] = "https://github.com/wnkz/monoglow.nvim/raw/main/extras/" .. fname
+        colors["_style_name"] = "Mono Glow" .. style_name
+        colors["_name"] = "monoglow_" .. style
+        colors["_style"] = style
+        print("[write] " .. fname)
+        util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
+      end
     end
   end
 end
