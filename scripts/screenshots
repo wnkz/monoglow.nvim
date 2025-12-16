@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Generate screenshots using VHS
+# Output: tapes/screenshots/*.png
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+
+cd "$PROJECT_DIR"
+
+# Ensure output directory exists
+mkdir -p tapes/screenshots
+
+# Run screenshot tapes
+echo "[vhs] Running tapes/screenshot.tape..."
+vhs tapes/screenshot.tape -q
+
+echo "[vhs] Running tapes/screenshot-styles.tape..."
+vhs tapes/screenshot-styles.tape -q
+
+echo "[vhs] Running tapes/screenshot-languages.tape..."
+vhs tapes/screenshot-languages.tape -q
+
+echo "[vhs] Running tapes/screenshot-custom-glow.tape..."
+vhs tapes/screenshot-custom-glow.tape -q
+
+# Crop mode screenshots to statusline only
+echo ""
+echo "[crop] Cropping mode screenshots to statusline..."
+for f in tapes/screenshots/screenshot-mode-insert.png tapes/screenshots/screenshot-mode-visual.png; do
+    magick "$f" -gravity South -crop 1600x56+0+2 +repage "$f"
+    echo "[crop] Cropped $f"
+done
+
+echo ""
+echo "Screenshots generated:"
+ls -la tapes/screenshots/screenshot-*.png 2>/dev/null || echo "No screenshots found"

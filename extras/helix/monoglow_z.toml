@@ -1,5 +1,5 @@
 attribute = { fg = "#707070" }
-comment = { fg = "#424242", modifiers = ["italic"] }
+comment = { fg = "#585858", modifiers = ["italic"] }
 "comment.block.documentation" = 
 constant = { fg = "#aaaaaa" }
 "constant.builtin" = { fg = "#7a7a7a" }
@@ -19,8 +19,8 @@ constructor = { fg = "#aaaaaa" }
 "diff.minus" = 
 "diff.plus" = 
 error = { fg = "#ffc0b9" }
-function = { fg = "#7a7a7a", modifiers = ["bold"] }
-"function.builtin" = { fg = "#555555" }
+function = { fg = "#cccccc", modifiers = ["bold"] }
+"function.builtin" = { fg = "#646464" }
 "function.macro" = { fg = "#707070", modifiers = ["bold"] }
 "function.method" = { fg = "#cccccc" }
 "function.special" = { fg = "#707070", modifiers = ["bold"] }
@@ -31,13 +31,13 @@ keyword = { fg = "#707070" }
 "keyword.control.conditional" = { fg = "#707070", modifiers = ["bold"] }
 "keyword.control.exception" = { fg = "#707070", modifiers = ["bold"] }
 "keyword.control.repeat" = { fg = "#707070", modifiers = ["bold"] }
-"keyword.control.return" = { fg = "#505050" }
+"keyword.control.return" = { fg = "#6c6c6c", modifiers = ["bold"] }
 "keyword.directive" = { fg = "#707070", modifiers = ["bold"] }
 "keyword.function" = 
 "keyword.operator" = { fg = "#707070", modifiers = ["bold"] }
-label = { fg = "#555555" }
+label = { fg = "#7a7a7a" }
 "markup.bold" = 
-"markup.heading" = { fg = "#555555" }
+"markup.heading" = { fg = "#7a7a7a" }
 "markup.heading.completion" = { bg = "#1b1b1b", fg = "#cccccc" }
 "markup.heading.hover" = { bg = "#1bfd9c", fg = "#0e0e0e", modifiers = ["bold"] }
 "markup.italic" = 
@@ -64,7 +64,7 @@ type = { fg = "#aaaaaa" }
 "type.enum.variant" = { fg = "#aaaaaa" }
 "ui.background" = { bg = "bg" }
 "ui.cursor" = { bg = "#cccccc", fg = "#121212" }
-"ui.cursor.match" = { bg = "#4f5258", modifiers = ["bold"], underline = { style = "line" } }
+"ui.cursor.match" = { fg = "#1bfd9c", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#444444" }
 "ui.linenr.select" = { fg = "#aaaaaa" }
 "ui.menu" = { bg = "#1b1b1b", fg = "#cccccc" }
@@ -77,12 +77,12 @@ type = { fg = "#aaaaaa" }
 "ui.statusline.normal" = { bg = "blue", fg = "black" }
 "ui.text" = { bg = "#121212", fg = "#cccccc" }
 "ui.text.focus" = { bg = "#2a2a2a" }
-"ui.text.inactive" = { fg = "#424242", modifiers = ["italic"] }
+"ui.text.inactive" = { fg = "#585858", modifiers = ["italic"] }
 "ui.text.info" = { fg = "#cccccc" }
 "ui.virtual.inlay-hint" = { bg = "#262828", fg = "#deeeed" }
 "ui.window" = { fg = "#444444" }
 variable = { fg = "#cccccc" }
-"variable.builtin" = { fg = "#555555" }
+"variable.builtin" = { fg = "#707070" }
 "variable.other.member" = { fg = "#aaaaaa" }
 "variable.parameter" = { fg = "#797979" }
 warning = { fg = "#fce094" }
@@ -130,7 +130,7 @@ gray7 = "#aaaaaa"
 gray8 = "#cccccc"
 gray9 = "#dddddd"
 hint = "#deeeed"
-icon = "#555555"
+icon = "#7a7a7a"
 info = "#8cf8f7"
 lack = "#708090"
 light_blue = "#a6dbff"
@@ -143,23 +143,23 @@ lsp_ref = "#262626"
 luster = "#deeeed"
 ok = "#b3f6c0"
 selection = "#212121"
-"special.comment" = "#424242"
-"special.exception" = "#505050"
+"special.comment" = "#585858"
+"special.exception" = "#616161"
 "special.keyword" = "#707070"
 "special.param" = "#797979"
 "special.property" = "#8c8c8c"
 "special.whitespace" = "#343434"
 "syntax.boolean" = "#66b2b2"
-"syntax.builtin" = "#555555"
-"syntax.comment" = "#424242"
+"syntax.builtin" = "#646464"
+"syntax.comment" = "#585858"
 "syntax.const" = "#aaaaaa"
 "syntax.const_builtin" = "#7a7a7a"
 "syntax.func_call" = "#7a7a7a"
 "syntax.func_def" = "#cccccc"
 "syntax.func_param" = "#797979"
 "syntax.keyword" = "#707070"
-"syntax.keyword_exception" = "#505050"
-"syntax.keyword_return" = "#505050"
+"syntax.keyword_exception" = "#616161"
+"syntax.keyword_return" = "#6c6c6c"
 "syntax.property" = "#8c8c8c"
 "syntax.punctuation" = "#cccccc"
 "syntax.special" = "#f1f1f1"
@@ -170,6 +170,7 @@ selection = "#212121"
 "syntax.type_def" = "#cccccc"
 "syntax.type_primitive" = "#aaaaaa"
 "syntax.var" = "#cccccc"
+"syntax.var_builtin" = "#707070"
 "syntax.var_member" = "#aaaaaa"
 "terminal.black" = "#2a2a2a"
 "terminal.black_bright" = "#4a4a4a"
@@ -187,7 +188,7 @@ selection = "#212121"
 "terminal.white_bright" = "#ffffff"
 "terminal.yellow" = "#b4b4b4"
 "terminal.yellow_bright" = "#dddddd"
-title = "#555555"
+title = "#7a7a7a"
 todo = "#708090"
 visual = "#2a2a2a"
 warning = "#fce094"

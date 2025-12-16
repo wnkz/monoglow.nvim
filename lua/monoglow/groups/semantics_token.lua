@@ -12,31 +12,32 @@ local M = {}
 
 ---@type monoglow.HighlightsFn
 function M.get(c)
+  -- NOTE: Many LSP semantic token groups are NOT defined here because Neovim
+  -- provides sensible defaults in highlight_group.c that link to TS groups:
+  --   @lsp.type.comment → @comment, @lsp.type.decorator → @attribute,
+  --   @lsp.type.enum → @type, @lsp.type.enumMember → @constant,
+  --   @lsp.type.keyword → @keyword, @lsp.type.namespace → @module,
+  --   @lsp.type.number → @number, @lsp.type.operator → @operator,
+  --   @lsp.type.parameter → @variable.parameter, @lsp.type.property → @property,
+  --   @lsp.type.string → @string, @lsp.type.variable → {} (defers to TS)
   return {
+    -- custom types (no Neovim defaults)
     ["@lsp.type.boolean"] = "@boolean",
     ["@lsp.type.builtinType"] = "@type.builtin",
-    ["@lsp.type.comment"] = "@comment",
-    ["@lsp.type.decorator"] = "@attribute",
     ["@lsp.type.deriveHelper"] = "@attribute",
-    ["@lsp.type.enum"] = "@type",
-    ["@lsp.type.enumMember"] = "@constant",
     ["@lsp.type.escapeSequence"] = "@string.escape",
     ["@lsp.type.formatSpecifier"] = "@markup.list",
     ["@lsp.type.generic"] = "@variable",
-    ["@lsp.type.keyword"] = "@keyword",
     ["@lsp.type.lifetime"] = "@keyword.storage",
-    ["@lsp.type.namespace"] = "@module",
-    ["@lsp.type.namespace.python"] = "@variable",
-    ["@lsp.type.number"] = "@number",
-    ["@lsp.type.operator"] = "@operator",
-    ["@lsp.type.parameter"] = "@variable.parameter",
-    ["@lsp.type.property"] = "@property",
     ["@lsp.type.selfKeyword"] = "@variable.builtin",
     ["@lsp.type.selfTypeKeyword"] = "@variable.builtin",
-    ["@lsp.type.string"] = "@string",
     ["@lsp.type.typeAlias"] = "@type.definition",
     ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
-    ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+
+    -- language-specific overrides
+    ["@lsp.type.namespace.python"] = "@variable",
+
+    -- type modifiers (defaultLibrary, async, injected, etc.)
     ["@lsp.typemod.class.defaultLibrary"] = "@type.builtin",
     ["@lsp.typemod.enum.defaultLibrary"] = "@type.builtin",
     ["@lsp.typemod.enumMember.defaultLibrary"] = "@constant.builtin",

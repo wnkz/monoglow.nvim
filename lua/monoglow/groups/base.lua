@@ -6,40 +6,40 @@ local M = {}
 function M.get(c, opts)
   return {
     -- editor:text
-    Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- normal text
-    NormalNC = "Normal", -- normal text in non-current windows
-    Title = { fg = c.title },
-    Whitespace = { fg = c.special.whitespace },
+    Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- Normal text
+    NormalNC = "Normal", -- Normal text in non-current windows
+    Title = { fg = c.title }, -- Titles for output from ":set all", ":autocmd" etc.
+    Whitespace = { fg = c.special.whitespace }, -- "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'
 
     -- editor:nontext
-    NonText = { fg = c.gray4 },
+    NonText = { fg = c.gray4 }, -- '@' at the end of the window, and characters from 'showbreak'
 
     -- editor:visual
-    Visual = { bg = c.visual },
-    VisualNOS = "Visual",
-    LspReferenceText = { bg = c.lsp_ref },
+    Visual = { bg = c.visual }, -- Visual mode selection
+    VisualNOS = "Visual", -- Visual mode selection when Vim is "Not Owning the Selection"
+    LspReferenceText = { bg = c.lsp_ref }, -- Used for highlighting "text" references
 
     -- editor:float
-    NormalFloat = { fg = c.fg, bg = c.bg_popup },
-    FloatBorder = { fg = c.border, bg = c.bg_popup },
-    FloatTitle = { fg = c.title },
+    NormalFloat = { fg = c.fg, bg = c.bg_popup }, -- Normal text in floating windows
+    FloatBorder = { fg = c.border, bg = c.bg_popup }, -- Border of floating windows
+    FloatTitle = { fg = c.title }, -- Title of floating windows
 
     -- editor:cursor
-    Cursor = { fg = c.bg, bg = c.fg },
-    CursorLine = { bg = c.cur_line },
-    CursorLineNr = { fg = c.cur_line_nr },
-    LineNr = { fg = c.fg_gutter },
-    SignColumn = { bg = opts.transparent and c.none or c.bg },
+    Cursor = { fg = c.bg, bg = c.fg }, -- Character under the cursor
+    CursorLine = { bg = c.cur_line }, -- Screen-line at the cursor
+    CursorLineNr = { fg = c.cur_line_nr }, -- Like LineNr when 'cursorline' is set
+    LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands
+    SignColumn = { bg = opts.transparent and c.none or c.bg }, -- Column where signs are displayed
 
     -- editor:search
-    CurSearch = "IncSearch",
-    IncSearch = { fg = c.black, bg = c.glow }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    Search = { fg = c.glow, bold = true },
-    Substitute = "Search",
+    CurSearch = "IncSearch", -- Current search match under cursor
+    IncSearch = { fg = c.black, bg = c.glow }, -- 'incsearch' highlighting; also used for ":s///c" replacement
+    Search = { fg = c.glow, bold = true }, -- Last search pattern highlighting (see 'hlsearch')
+    Substitute = "Search", -- :substitute replacement text highlighting
 
     -- editor:fold
-    Folded = { fg = c.gray4 },
-    FoldColumn = { fg = c.gray4 },
+    Folded = { fg = c.gray4 }, -- Line used for closed folds
+    FoldColumn = { fg = c.gray4 }, -- 'foldcolumn'
 
     -- editor:diff
     DiffAdd = { fg = c.bg, bg = c.diff.add }, -- diff mode: Added line |diff.txt|
@@ -48,60 +48,59 @@ function M.get(c, opts)
     DiffText = { fg = c.bg, bg = c.diff.text }, -- diff mode: Changed text within a changed line |diff.txt|
 
     -- editor:menu
-    Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg_menu },
-    PmenuSel = { fg = c.black, bg = c.glow, bold = true },
-    PmenuSbar = { fg = c.gray5, bg = c.gray3 },
-    PmenuThumb = { fg = c.gray3, bg = c.gray5 },
+    Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg_menu }, -- Popup menu: normal item
+    PmenuSel = { fg = c.black, bg = c.glow, bold = true }, -- Popup menu: selected item
+    PmenuSbar = { fg = c.gray5, bg = c.gray3 }, -- Popup menu: scrollbar
+    PmenuThumb = { fg = c.gray3, bg = c.gray5 }, -- Popup menu: Thumb of the scrollbar
 
     -- editor:statusline
-    StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
-    StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows
-    WinBar = "StatusLine",
-    WinBarNC = "StatusLineNC",
+    StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- Status line of current window
+    StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- Status lines of not-current windows
+    WinBar = "StatusLine", -- Window bar of current window
+    WinBarNC = "StatusLineNC", -- Window bar of not-current windows
 
     -- editor:ui (other)
-    EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    WinSeparator = { fg = c.border },
+    EndOfBuffer = { fg = opts.eob and c.gray2 or c.bg }, -- Filler lines (~) after the end of the buffer
+    WinSeparator = { fg = c.border }, -- Separator between window splits
 
     -- editor:misc
-    Directory = { fg = c.fs.dir },
+    Directory = { fg = c.fs.dir }, -- Directory names (and other special names in listings)
 
     -- syntax
-    Conditional = "Keyword",
-    Exception = "Keyword",
-    Function = { fg = c.syntax.func_call, bold = opts.glow }, -- function name (also: methods for classes)
-    Identifier = { fg = c.syntax.type, bold = opts.glow }, -- (preferred) any variable name
-    Keyword = { fg = c.syntax.keyword, bold = opts.glow }, --  any other keyword
-    Label = "Keyword",
-    PreProc = "Keyword", -- (preferred) generic Preprocessor
-    Repeat = "Keyword",
-    Special = { fg = c.syntax.special }, -- (preferred) any special symbol
-    Statement = "Keyword", -- (preferred) any statement
-    Type = { fg = c.syntax.type }, -- (preferred) int, long, char, etc.
-    Variable = { fg = c.syntax.var },
+    Conditional = "Keyword", -- if, then, else, endif, switch, etc.
+    Exception = "Keyword", -- try, catch, throw, etc.
+    Function = { fg = c.syntax.func_def, bold = opts.glow }, -- Function name (also: methods for classes)
+    Identifier = { fg = c.syntax.type, bold = opts.glow }, -- Any variable name
+    Keyword = { fg = c.syntax.keyword, bold = opts.glow }, -- Any other keyword
+    Label = "Keyword", -- case, default, etc.
+    PreProc = "Keyword", -- Generic Preprocessor
+    Repeat = "Keyword", -- for, do, while, etc.
+    Special = { fg = c.syntax.special }, -- Any special symbol
+    Statement = "Keyword", -- Any statement
+    Type = { fg = c.syntax.type }, -- int, long, char, etc.
+    Variable = { fg = c.syntax.var }, -- Variable names (Vim9 script)
 
     -- syntax:constants
-    Boolean = { fg = c.syntax.boolean },
-    Character = "String",
-    Constant = { fg = c.syntax.const }, -- (preferred) any constant
-    Float = "Constant",
-    Number = "Constant",
-    String = { fg = c.syntax.string }, -- a string constant: "this is a string"
+    Boolean = { fg = c.syntax.boolean }, -- true, false
+    Character = "String", -- 'c', '\n'
+    Constant = { fg = c.syntax.const }, -- Any constant
+    Float = "Constant", -- Floating point constant: 2.3e10
+    Number = "Constant", -- Numeric constant: 234, 0xff
+    String = { fg = c.syntax.string }, -- String constant: "this is a string"
 
     -- syntax:punctuation
-    Quote = "String",
-    Operator = { fg = c.glow, bold = opts.glow },
-    Delimiter = { fg = c.syntax.punctuation }, -- character that needs attention
+    Quote = "String", -- Quote characters around strings
+    Operator = { fg = c.glow, bold = opts.glow }, -- "sizeof", "+", "*", etc.
+    Delimiter = { fg = c.syntax.punctuation }, -- Character that needs attention
 
     -- syntax:comments
-    Comment = { fg = c.syntax.comment, italic = true }, -- any comment
+    Comment = { fg = c.syntax.comment, italic = true }, -- Any comment
 
     -- diagnostics
     DiagnosticError = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticOk = { fg = c.ok }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticUnnecessary = { fg = c.fg }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
     DiagnosticVirtualTextError = { bg = util.blend_bg(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
@@ -117,7 +116,42 @@ function M.get(c, opts)
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
 
     -- webdevicon
-    DevIconDefault = { fg = c.icon },
+    DevIconDefault = { fg = c.icon }, -- Default icon for nvim-web-devicons
+
+    -- syntax:preproc (for non-TS users)
+    Structure = "Type", -- struct, union, enum, etc.
+    StorageClass = "Keyword", -- static, register, volatile, etc.
+    Typedef = "Type", -- typedef
+    Include = "Keyword", -- #include
+    Define = "Keyword", -- #define
+    Macro = "Keyword", -- Same as Define
+    PreCondit = "Keyword", -- #if, #else, #endif, etc.
+
+    -- syntax:special (for non-TS users)
+    SpecialChar = "Special", -- Special character in a constant
+    Tag = "Special", -- Can use CTRL-] on this
+    Debug = "Special", -- Debugging statements
+    SpecialComment = "Special", -- Special things inside a comment
+
+    -- syntax:misc (for non-TS users)
+    Underlined = { underline = true }, -- Text that stands out, HTML links
+    Ignore = { fg = c.gray3 }, -- Left blank, hidden
+    Error = { fg = c.error }, -- Any erroneous construct
+    Todo = { fg = c.todo, bold = true }, -- TODO, FIXME, XXX, etc.
+
+    -- diff:standard (used by @diff.plus/minus/delta via Nvim defaults)
+    Added = { fg = c.diff.add }, -- Added line in a diff
+    Changed = { fg = c.diff.change }, -- Changed line in a diff
+    Removed = { fg = c.diff.delete }, -- Removed line in a diff
+
+    -- editor:matching
+    MatchParen = { fg = c.glow, bold = true }, -- Character under the cursor or just before it if matching
+
+    -- editor:spell
+    SpellBad = { undercurl = true, sp = c.error }, -- Word that is not recognized by the spellchecker
+    SpellCap = { undercurl = true, sp = c.warning }, -- Word that should start with a capital
+    SpellRare = { undercurl = true, sp = c.info }, -- Word that is recognized as rarely used
+    SpellLocal = { undercurl = true, sp = c.hint }, -- Word from another region
   }
 end
 

@@ -171,7 +171,7 @@
         "string.comment"
       ],
       "settings": {
-        "foreground": "#424242",
+        "foreground": "#585858",
         "fontStyle": "italic"
       }
     },
@@ -251,7 +251,7 @@
         "keyword.control.flow.return"
       ],
       "settings": {
-        "foreground": "#505050"
+        "foreground": "#6c6c6c"
       }
     },
     {
@@ -260,7 +260,7 @@
         "keyword.control.trycatch"
       ],
       "settings": {
-        "foreground": "#505050"
+        "foreground": "#616161"
       }
     },
     {
@@ -421,7 +421,7 @@
         "markup.heading"
       ],
       "settings": {
-        "foreground": "#555555",
+        "foreground": "#7a7a7a",
         "fontStyle": "bold"
       }
     },
@@ -462,7 +462,7 @@
         "markup.quote"
       ],
       "settings": {
-        "foreground": "#424242",
+        "foreground": "#585858",
         "fontStyle": "italic"
       }
     },
