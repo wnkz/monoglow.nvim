@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Generate palette SVGs and PALETTE.md
+set -e
+exec "$(dirname "$0")/generate_palettes.py" "$@"

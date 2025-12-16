@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 72" width="712" height="72">
+  <rect width="712" height="72" fill="#121212"/>
+  <rect x="16" y="16" width="72" height="40" rx="4" fill="#baffc9"/>
+  <text x="52" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">add</text>
+  <text x="52" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#baffc9</text>
+  <rect x="92" y="16" width="72" height="40" rx="4" fill="#ffffba"/>
+  <text x="128" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">change</text>
+  <text x="128" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#ffffba</text>
+  <rect x="168" y="16" width="72" height="40" rx="4" fill="#ffb3ba"/>
+  <text x="204" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">delete</text>
+  <text x="204" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#ffb3ba</text>
+  <rect x="244" y="16" width="72" height="40" rx="4" fill="#ffc0b9"/>
+  <text x="280" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">red</text>
+  <text x="280" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#ffc0b9</text>
+  <rect x="320" y="16" width="72" height="40" rx="4" fill="#fce094"/>
+  <text x="356" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">yellow</text>
+  <text x="356" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#fce094</text>
+  <rect x="396" y="16" width="72" height="40" rx="4" fill="#b3f6c0"/>
+  <text x="432" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">green</text>
+  <text x="432" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#b3f6c0</text>
+  <rect x="472" y="16" width="72" height="40" rx="4" fill="#8cf8f7"/>
+  <text x="508" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">cyan</text>
+  <text x="508" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#8cf8f7</text>
+  <rect x="548" y="16" width="72" height="40" rx="4" fill="#a6dbff"/>
+  <text x="584" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">blue</text>
+  <text x="584" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#a6dbff</text>
+  <rect x="624" y="16" width="72" height="40" rx="4" fill="#ffcaff"/>
+  <text x="660" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">magenta</text>
+  <text x="660" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#ffcaff</text>
+</svg>
