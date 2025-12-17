@@ -10,7 +10,7 @@ function M.get(c, opts)
     CmpItemAbbrMatch = { fg = c.blue2 },
     CmpItemAbbrMatchFuzzy = { fg = c.blue2 },
     CmpItemAbbrDeprecated = { fg = c.cmp.deprecated, bg = c.none, strikethrough = true },
-    CmpItemMenu = { fg = c.comment, bg = c.none },
+    CmpItemMenu = { fg = c.gray4, bg = c.bg_menu },
   }
 
   require("monoglow.groups.kinds").kinds(ret, "CmpItemKind%s")
