@@ -18,6 +18,7 @@ M.extras = {
   ghostty = { ext = "", url = "https://ghostty.org/docs/features/theme", label = "Ghostty" },
   kitty = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
+  opencode = { ext = "json", url = "https://opencode.ai/", label = "OpenCode", sep = "-" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   vscode = { ext = "json", url = "https://code.visualstudio.com/", label = "VS Code", subdir = "themes", sep = "-" },
   zed = { ext = "json", url = "https://zed.dev/", label = "Zed", all_styles = true },
