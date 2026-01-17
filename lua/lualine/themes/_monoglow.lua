@@ -9,13 +9,13 @@ function M.get(style)
   local hl = {}
 
   hl.normal = {
-    a = { bg = util.darken(colors.bg_statusline, 0.2), fg = colors.gray8 },
+    a = { bg = colors.mode.normal.bg, fg = colors.mode.normal.fg },
     b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
 
   hl.insert = {
-    a = { bg = colors.glow, fg = colors.black },
+    a = { bg = colors.mode.insert.bg, fg = colors.mode.insert.fg },
     b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
@@ -23,7 +23,7 @@ function M.get(style)
   hl.command = hl.insert
 
   hl.visual = {
-    a = { bg = colors.gray9, fg = colors.black },
+    a = { bg = colors.mode.visual.bg, fg = colors.mode.visual.fg },
     b = { bg = util.darken(colors.bg_statusline, 0.5), fg = colors.gray7 },
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }

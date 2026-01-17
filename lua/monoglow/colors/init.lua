@@ -51,6 +51,7 @@ function M.setup(opts)
   ---@field fs table Filesystem colors for file explorers
   ---@field cmp table Completion menu colors
   ---@field terminal TerminalColors Terminal palette
+  ---@field mode ModeColors Mode colors for statusline/vim indicators
   local colors = palette
 
   util.bg = colors.bg
@@ -149,6 +150,16 @@ function M.setup(opts)
   colors.ok = colors.light_green
   colors.todo = colors.lack
   colors.warning = colors.light_yellow
+
+  -- Mode colors (for statusline/vim mode indicators)
+  ---@class ModeColors
+  colors.mode = {
+    normal = { bg = util.darken(colors.bg_statusline, 0.2), fg = colors.gray8 },
+    insert = { bg = colors.glow, fg = colors.black },
+    visual = { bg = colors.gray9, fg = colors.black },
+    replace = { bg = colors.gray9, fg = colors.black }, -- same as visual
+    command = { bg = colors.glow, fg = colors.black }, -- same as insert
+  }
 
   -- Terminal colors
   -- Inspired by https://github.com/PieterHeijman/terminal-color-themes/blob/master/movies/Psycho.json
