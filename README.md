@@ -120,6 +120,34 @@ require("monoglow").setup({
 
 </details>
 
+<details>
+  <summary>Changing Highlight Styles</summary>
+
+You can customize styles (italic, bold, etc.) for any highlight group using `on_highlights`.
+
+> **Note:** `on_highlights` replaces the entire highlight definition. To preserve
+> existing properties (like `fg`), include them in your override or use `vim.tbl_extend`.
+
+```lua
+require("monoglow").setup({
+  on_highlights = function(hl, c)
+    -- Override with full definition (recommended)
+    hl["@function"] = { fg = c.syntax.func_def, italic = true, bold = true }
+    hl.Boolean = { fg = c.syntax.boolean, bold = true, italic = true }
+    hl["@keyword"] = { fg = c.syntax.keyword, italic = true }
+
+    -- Or use vim.tbl_extend for partial overrides
+    hl.Comment = vim.tbl_extend("force", hl.Comment, { bold = true })
+  end,
+})
+```
+
+See [`lua/monoglow/groups/base.lua`](lua/monoglow/groups/base.lua) and
+[`lua/monoglow/groups/treesitter.lua`](lua/monoglow/groups/treesitter.lua) for
+all available highlight groups.
+
+</details>
+
 ## 🍭 Extras
 
 Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Vim](extras/vim/), [VS Code](extras/vscode/), and [Zed](extras/zed/) can be found in [extras/](extras/).
