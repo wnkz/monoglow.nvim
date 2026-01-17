@@ -11,8 +11,8 @@
 local M = {}
 
 ---@class monoglow.Config
----@field on_colors fun(colors: ColorScheme)
----@field on_highlights fun(highlights: monoglow.Highlights, colors: ColorScheme)
+---@field on_colors? fun(colors: ColorScheme)
+---@field on_highlights? fun(highlights: monoglow.Highlights, colors: ColorScheme)
 M.defaults = {
   style = "z", -- The theme comes in three styles, `z`, a variant closer to lackluster `lack` and `void`
   glow = true, -- When `true`, some highlights will be bold (e.g. Function, Keyword, ...)

@@ -99,7 +99,7 @@ function M.brighten(color, lightness_amount, saturation_amount)
 end
 
 ---@param groups monoglow.Highlights
----@return table<string, vim.api.keyset.highlight>
+---@return table<string, vim.api.keyset.highlight|string>
 function M.resolve(groups)
   for _, hl in pairs(groups) do
     if type(hl.style) == "table" then
