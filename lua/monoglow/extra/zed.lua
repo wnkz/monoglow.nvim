@@ -287,6 +287,24 @@ local function generate_style(colors)
       ["variable.special"] = { color = hex8(colors.syntax.var_builtin) },
       ["variant"] = { color = hex8(colors.syntax.const) },
     },
+
+    -- Vim mode colors (status bar indicator)
+    ["vim.normal.background"] = hex8(colors.mode.normal.bg),
+    ["vim.normal.foreground"] = hex8(colors.mode.normal.fg),
+    ["vim.insert.background"] = hex8(colors.mode.insert.bg),
+    ["vim.insert.foreground"] = hex8(colors.mode.insert.fg),
+    ["vim.visual.background"] = hex8(colors.mode.visual.bg),
+    ["vim.visual.foreground"] = hex8(colors.mode.visual.fg),
+    ["vim.visual_line.background"] = hex8(colors.mode.visual.bg),
+    ["vim.visual_line.foreground"] = hex8(colors.mode.visual.fg),
+    ["vim.visual_block.background"] = hex8(colors.mode.visual.bg),
+    ["vim.visual_block.foreground"] = hex8(colors.mode.visual.fg),
+    ["vim.replace.background"] = hex8(colors.mode.replace.bg),
+    ["vim.replace.foreground"] = hex8(colors.mode.replace.fg),
+    ["vim.helix_normal.background"] = hex8(colors.mode.normal.bg),
+    ["vim.helix_normal.foreground"] = hex8(colors.mode.normal.fg),
+    ["vim.helix_select.background"] = hex8(colors.mode.visual.bg),
+    ["vim.helix_select.foreground"] = hex8(colors.mode.visual.fg),
   }
 end
 
