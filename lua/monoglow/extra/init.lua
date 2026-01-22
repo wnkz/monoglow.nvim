@@ -21,6 +21,7 @@ M.extras = {
   opencode = { ext = "json", url = "https://opencode.ai/", label = "OpenCode", sep = "-" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   vscode = { ext = "json", url = "https://code.visualstudio.com/", label = "VS Code", subdir = "themes", sep = "-" },
+  wezterm = { ext = "toml", url = "https://wezterm.org/", label = "WezTerm" },
   zed = { ext = "json", url = "https://zed.dev/", label = "Zed", all_styles = true },
 }
 
