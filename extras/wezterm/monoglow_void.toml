@@ -1,0 +1,61 @@
+# WezTerm color scheme
+# https://wezterm.org/config/appearance.html
+
+[metadata]
+name = "Mono Glow Void"
+author = "wnkz (https://github.com/wnkz)"
+origin_url = "https://github.com/wnkz/monoglow.nvim/raw/main/extras/wezterm/monoglow_void.toml"
+
+[colors]
+background = "#1c1c1c"
+foreground = "#c0c0c0"
+cursor_bg = "#c0c0c0"
+cursor_fg = "#1c1c1c"
+cursor_border = "#c0c0c0"
+selection_bg = "#313131"
+selection_fg = "#e1e1e1"
+
+ansi = [
+  "#303030",
+  "#deeeed",
+  "#1bfd9c",
+  "#bababa",
+  "#a1a1a1",
+  "#66b2b2",
+  "#d1d1d1",
+  "#f1f1f1",
+]
+
+brights = [
+  "#4d4d4d",
+  "#708090",
+  "#a6ffc9",
+  "#e1e1e1",
+  "#b1b1b1",
+  "#49c4c4",
+  "#d7d7d7",
+  "#ffffff",
+]
+
+[colors.tab_bar]
+background = "#1c1c1c"
+
+[colors.tab_bar.active_tab]
+bg_color = "#e1e1e1"
+fg_color = "#161616"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#303030"
+fg_color = "#a1a1a1"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#404040"
+fg_color = "#c0c0c0"
+
+[colors.tab_bar.new_tab]
+bg_color = "#303030"
+fg_color = "#a1a1a1"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#404040"
+fg_color = "#c0c0c0"
