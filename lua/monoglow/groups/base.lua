@@ -51,7 +51,11 @@ function M.get(c, opts)
     Pmenu = { fg = c.fg, bg = opts.transparent and c.none or c.bg_menu }, -- Popup menu: normal item
     PmenuSel = { fg = c.black, bg = c.glow, bold = true }, -- Popup menu: selected item
     PmenuSbar = { fg = c.gray5, bg = c.gray3 }, -- Popup menu: scrollbar
-    PmenuThumb = { fg = c.gray3, bg = c.gray5 }, -- Popup menu: Thumb of the scrollbar
+    PmenuThumb = { fg = c.gray3, bg = c.gray5 }, -- Popup menu: thumb of the scrollbar
+    PmenuExtra = { fg = c.gray4 }, -- Popup menu: additional information
+    PmenuExtraSel = { fg = c.black, bg = c.glow, bold = true }, -- Popup menu: additional information (selected)
+    PmenuKind = { fg = c.cmp.kind }, -- Popup menu: kind icon
+    PmenuKindSel = { fg = c.black, bg = c.glow, bold = true }, -- Popup menu: kind icon (selected)
 
     -- editor:statusline
     StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- Status line of current window
