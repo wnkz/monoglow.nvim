@@ -7,7 +7,7 @@ Palette visualizations and WCAG contrast metrics for all Monoglow styles.
 
 ## Monoglow Z (default)
 
-![Monoglow Z (default) Palette](https://github.com/user-attachments/assets/ecd5cf8d-ccfa-41be-a965-ddeb55687caa)
+![Monoglow Z (default) Palette](assets/palette-z.svg)
 
 ### Contrast Ratios (against `#121212`)
 
@@ -29,7 +29,7 @@ Palette visualizations and WCAG contrast metrics for all Monoglow styles.
 
 ## Monoglow Lack
 
-![Monoglow Lack Palette](https://github.com/user-attachments/assets/04eef850-bfc6-45ef-a36f-855d728b2afb)
+![Monoglow Lack Palette](assets/palette-lack.svg)
 
 ### Contrast Ratios (against `#101010`)
 
@@ -51,7 +51,7 @@ Palette visualizations and WCAG contrast metrics for all Monoglow styles.
 
 ## Monoglow Void
 
-![Monoglow Void Palette](https://github.com/user-attachments/assets/db9c533b-b288-4148-99ad-895308b533f9)
+![Monoglow Void Palette](assets/palette-void.svg)
 
 ### Contrast Ratios (against `#1c1c1c`)
 
@@ -71,11 +71,33 @@ Palette visualizations and WCAG contrast metrics for all Monoglow styles.
 
 ---
 
+## Monoglow Light
+
+![Monoglow Light Palette](assets/palette-light.svg)
+
+### Contrast Ratios (against `#f0f0f0`)
+
+| Color  | Hex       |  Ratio | AA  | AAA | Usage                |
+| ------ | --------- | -----: | :-: | :-: | -------------------- |
+| fg     | `#3a3a3a` | 9.98:1 |  +  |  +  | Main text            |
+| gray8  | `#3a3a3a` | 9.98:1 |  +  |  +  | Variables, functions |
+| gray7  | `#555555` | 6.54:1 |  +  |  -  | Strings, types       |
+| gray6  | `#707070` | 4.35:1 |  -  |  -  | Keywords             |
+| gray5  | `#909090` | 2.80:1 |  -  |  -  | Secondary text       |
+| gray4  | `#b0b0b0` | 1.90:1 |  -  |  -  | Line numbers, gutter |
+| glow   | `#059669` | 3.31:1 |  -  |  -  | Accent / search      |
+| lack   | `#506070` | 5.67:1 |  +  |  -  | Tribute accent       |
+| luster | `#2a5e5e` | 6.44:1 |  +  |  -  | Bright accent        |
+| blue1  | `#3d7a7a` | 4.32:1 |  -  |  -  | Blue accent 1        |
+| blue2  | `#2e8a8a` | 3.60:1 |  -  |  -  | Blue accent 2        |
+
+---
+
 ## Shared Colors (Git & Diagnostics)
 
 These colors are consistent across all Monoglow styles.
 
-![Shared Colors Palette](https://github.com/user-attachments/assets/e04d91e9-4a06-47f6-b542-48e95e6ef836)
+![Shared Colors Palette](assets/palette-shared.svg)
 
 ### Contrast Ratios (against `#121212`)
 

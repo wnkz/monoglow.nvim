@@ -34,6 +34,7 @@ function M.setup()
     z = "",
     void = " Void",
     lack = " Lack",
+    light = " Light",
   }
 
   ---@type string[]
@@ -53,6 +54,7 @@ function M.setup()
         colors["_style_name"] = "Mono Glow" .. style_name
         colors["_name"] = "monoglow_" .. style
         colors["_style"] = style
+        colors["_appearance"] = colors.is_light and "light" or "dark"
         all_colors[style] = colors
       end
       local fname = extra .. "/monoglow." .. info.ext
@@ -74,6 +76,7 @@ function M.setup()
         colors["_style_name"] = "Mono Glow" .. style_name
         colors["_name"] = "monoglow_" .. style
         colors["_style"] = style
+        colors["_appearance"] = colors.is_light and "light" or "dark"
         print("[write] " .. fname)
         util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
       end

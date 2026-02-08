@@ -8,7 +8,7 @@ function M.generate(colors)
     [[
 {
   "name": "${_style_name}",
-  "type": "dark",
+  "type": "${_appearance}",
   "colors": {
     "activityBar.background": "${bg}",
     "activityBar.foreground": "${fg}",

@@ -57,8 +57,11 @@ function M.setup(opts)
   util.bg = colors.bg
   util.fg = colors.fg
 
+  local is_light = palette.is_light or false
+
   -- Special value
   colors.none = "NONE"
+  colors.is_light = is_light
 
   -- Diff colors (for inline diffs)
   colors.diff = {
@@ -69,7 +72,7 @@ function M.setup(opts)
   }
 
   -- UI backgrounds
-  colors.black = util.blend_bg(colors.bg, 0.8, "#000000")
+  colors.black = util.blend_bg(colors.bg, 0.8, is_light and "#ffffff" or "#000000")
   colors.bg_menu = util.lighten(colors.bg, 0.95)
   colors.bg_popup = util.lighten(colors.bg, 0.955)
   colors.bg_statusline = util.lighten(colors.bg, 0.97)
@@ -182,6 +185,15 @@ function M.setup(opts)
     white = colors.gray10,
     white_bright = colors.white,
   }
+
+  if is_light then
+    colors.terminal = vim.tbl_deep_extend("force", colors.terminal, {
+      black = "#3a3a3a",
+      black_bright = "#555555",
+      white = "#d0d0d0",
+      white_bright = "#f0f0f0",
+    })
+  end
 
   opts.on_colors(colors)
 
