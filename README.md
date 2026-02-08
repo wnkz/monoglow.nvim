@@ -156,6 +156,12 @@ all available highlight groups.
 Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Vim](extras/vim/), [VS Code](extras/vscode/), [WezTerm](extras/wezterm/), and [Zed](extras/zed/) can be found in [extras/](extras/).
 To use them, refer to their respective documentation.
 
+## ☀️ Light Theme
+
+A light variant is also available for those who prefer it.
+
+![Monoglow Light screenshot](https://github.com/user-attachments/assets/50e0f479-92a5-4ad1-9880-00511b765fb6)
+
 ## 🔥 Contributing
 
 Pull requests are welcome.
