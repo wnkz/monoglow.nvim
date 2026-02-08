@@ -20,11 +20,11 @@ hi DiagnosticUnderlineHint gui=undercurl guibg=NONE guisp=#deeeed
 hi DiagnosticUnderlineInfo gui=undercurl guibg=NONE guisp=#8cf8f7
 hi DiagnosticUnderlineOk gui=undercurl guibg=NONE guisp=#b3f6c0
 hi DiagnosticUnderlineWarn gui=undercurl guibg=NONE guisp=#fce094
-hi DiagnosticVirtualTextError guibg=#282221 guifg=#ffc0b9
-hi DiagnosticVirtualTextHint guibg=#252626 guifg=#deeeed
-hi DiagnosticVirtualTextInfo guibg=#1c2727 guifg=#8cf8f7
-hi DiagnosticVirtualTextOk guibg=#202722 guifg=#b3f6c0
-hi DiagnosticVirtualTextWarn guibg=#28251d guifg=#fce094
+hi DiagnosticVirtualTextError guibg=#f2ebeb guifg=#ffc0b9
+hi DiagnosticVirtualTextHint guibg=#eef0f0 guifg=#deeeed
+hi DiagnosticVirtualTextInfo guibg=#e6f1f1 guifg=#8cf8f7
+hi DiagnosticVirtualTextOk guibg=#eaf1eb guifg=#b3f6c0
+hi DiagnosticVirtualTextWarn guibg=#f1eee7 guifg=#fce094
 hi DiagnosticWarn guibg=NONE guifg=#fce094
 hi DiffAdd guibg=#769f7f guifg=#101010
 hi DiffChange guibg=#7a7a7a guifg=#101010

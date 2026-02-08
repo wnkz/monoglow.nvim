@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 116" width="712" height="116">
+  <rect width="712" height="116" fill="#f0f0f0"/>
+  <rect x="16" y="16" width="72" height="40" rx="4" fill="#f0f0f0"/>
+  <text x="52" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">bg</text>
+  <text x="52" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#f0f0f0</text>
+  <rect x="92" y="16" width="72" height="40" rx="4" fill="#f1f1f1"/>
+  <text x="128" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">gray1</text>
+  <text x="128" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#f1f1f1</text>
+  <rect x="168" y="16" width="72" height="40" rx="4" fill="#e2e2e2"/>
+  <text x="204" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">gray2</text>
+  <text x="204" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#e2e2e2</text>
+  <rect x="244" y="16" width="72" height="40" rx="4" fill="#d0d0d0"/>
+  <text x="280" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">gray3</text>
+  <text x="280" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#000000" text-anchor="middle">#d0d0d0</text>
+  <rect x="320" y="16" width="72" height="40" rx="4" fill="#b0b0b0"/>
+  <text x="356" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray4</text>
+  <text x="356" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#b0b0b0</text>
+  <rect x="396" y="16" width="72" height="40" rx="4" fill="#909090"/>
+  <text x="432" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray5</text>
+  <text x="432" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#909090</text>
+  <rect x="472" y="16" width="72" height="40" rx="4" fill="#707070"/>
+  <text x="508" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray6</text>
+  <text x="508" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#707070</text>
+  <rect x="548" y="16" width="72" height="40" rx="4" fill="#555555"/>
+  <text x="584" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray7</text>
+  <text x="584" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#555555</text>
+  <rect x="624" y="16" width="72" height="40" rx="4" fill="#3a3a3a"/>
+  <text x="660" y="31" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray8</text>
+  <text x="660" y="45" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#3a3a3a</text>
+  <rect x="16" y="60" width="72" height="40" rx="4" fill="#252525"/>
+  <text x="52" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray9</text>
+  <text x="52" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#252525</text>
+  <rect x="92" y="60" width="72" height="40" rx="4" fill="#151515"/>
+  <text x="128" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">gray10</text>
+  <text x="128" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#151515</text>
+  <rect x="168" y="60" width="72" height="40" rx="4" fill="#3a3a3a"/>
+  <text x="204" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">fg</text>
+  <text x="204" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#3a3a3a</text>
+  <rect x="244" y="60" width="72" height="40" rx="4" fill="#000000"/>
+  <text x="280" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">white</text>
+  <text x="280" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#000000</text>
+  <rect x="320" y="60" width="72" height="40" rx="4" fill="#059669"/>
+  <text x="356" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">glow</text>
+  <text x="356" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#059669</text>
+  <rect x="396" y="60" width="72" height="40" rx="4" fill="#506070"/>
+  <text x="432" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">lack</text>
+  <text x="432" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#506070</text>
+  <rect x="472" y="60" width="72" height="40" rx="4" fill="#2a5e5e"/>
+  <text x="508" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">luster</text>
+  <text x="508" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#2a5e5e</text>
+  <rect x="548" y="60" width="72" height="40" rx="4" fill="#3d7a7a"/>
+  <text x="584" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">blue1</text>
+  <text x="584" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#3d7a7a</text>
+  <rect x="624" y="60" width="72" height="40" rx="4" fill="#2e8a8a"/>
+  <text x="660" y="75" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">blue2</text>
+  <text x="660" y="89" font-family="ui-monospace, monospace" font-size="9" fill="#ffffff" text-anchor="middle">#2e8a8a</text>
+</svg>

@@ -376,7 +376,7 @@ def generate_palette_md(
 
 def main() -> None:
     """Generate palette SVGs and PALETTE.md."""
-    styles = ["z", "lack", "void"]
+    styles = ["z", "lack", "void", "light"]
 
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(exist_ok=True)

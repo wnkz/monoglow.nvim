@@ -1,7 +1,7 @@
 {
   "name": "monoglow",
   "displayName": "Mono Glow",
-  "description": "A dark, mostly monochrome colorscheme with a touch of glowing.",
+  "description": "A mostly monochrome colorscheme with a touch of glowing.",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "publisher": "wnkz",
@@ -27,6 +27,11 @@
         "label": "Mono Glow Void",
         "uiTheme": "vs-dark",
         "path": "./themes/monoglow-void.json"
+      },
+      {
+        "label": "Mono Glow Light",
+        "uiTheme": "vs",
+        "path": "./themes/monoglow-light.json"
       }
     ]
   },
