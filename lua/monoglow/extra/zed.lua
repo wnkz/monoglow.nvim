@@ -375,16 +375,17 @@ function M.generate(all_colors)
     z = "Mono Glow",
     void = "Mono Glow Void",
     lack = "Mono Glow Lack",
+    light = "Mono Glow Light",
   }
 
   local themes = {}
-  -- Ensure consistent order: z, void, lack
-  for _, style in ipairs({ "z", "void", "lack" }) do
+  -- Ensure consistent order: z, void, lack, light
+  for _, style in ipairs({ "z", "void", "lack", "light" }) do
     local colors = all_colors[style]
     if colors then
       table.insert(themes, {
         name = style_names[style],
-        appearance = "dark",
+        appearance = colors._appearance or "dark",
         style = generate_style(colors),
       })
     end

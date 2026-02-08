@@ -17,6 +17,8 @@ function M.setup(opts)
   local colors = require("monoglow.colors").setup(opts)
   local groups = require("monoglow.groups").setup(colors, opts)
 
+  vim.o.background = colors.is_light and "light" or "dark"
+
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
     vim.cmd("hi clear")

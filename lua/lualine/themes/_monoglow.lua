@@ -4,6 +4,9 @@ local M = {}
 
 ---@param style? string
 function M.get(style)
+  if not style and vim.g.colors_name then
+    style = vim.g.colors_name:match("^monoglow%-(.+)$")
+  end
   local colors, config = require("monoglow.colors").setup({ style = style })
 
   local hl = {}

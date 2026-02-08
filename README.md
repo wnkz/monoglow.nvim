@@ -1,6 +1,6 @@
 # 🎆 Mono Glow
 
-A dark, mostly monochrome colorscheme with a touch of glowing.
+A mostly monochrome colorscheme with a touch of glowing.
 
 ![Monoglow Z screenshot](https://github.com/user-attachments/assets/4f4052be-def8-43b0-99f2-5c6f2ec2d502)
 ![Insert mode](https://github.com/user-attachments/assets/1d4239b3-4e3e-4b57-9462-877d9de809c1)
@@ -83,11 +83,12 @@ colorscheme monoglow
 colorscheme monoglow-z
 colorscheme monoglow-lack
 colorscheme monoglow-void
+colorscheme monoglow-light
 ```
 
 ## 🎨 Palette
 
-> See [PALETTE.md](PALETTE.md) for all styles (z, lack, void) with WCAG contrast ratios.
+> See [PALETTE.md](PALETTE.md) for all styles (z, lack, void, light) with WCAG contrast ratios.
 
 ## 🪓 Overriding Colors & Highlight Groups
 
@@ -101,8 +102,9 @@ How the highlight groups are calculated:
 
 For default values of `colors` and `highlights`, please consult the
 [z](lua/monoglow/colors/z.lua),
-[lack](lua/monoglow/colors/lack.lua), and
-[void](lua/monoglow/colors/void.lua) palettes, as well as the
+[lack](lua/monoglow/colors/lack.lua),
+[void](lua/monoglow/colors/void.lua), and
+[light](lua/monoglow/colors/light.lua) palettes, as well as the
 [base highlights](lua/monoglow/groups/base.lua).
 
 <details open>
@@ -153,6 +155,12 @@ all available highlight groups.
 
 Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Vim](extras/vim/), [VS Code](extras/vscode/), [WezTerm](extras/wezterm/), and [Zed](extras/zed/) can be found in [extras/](extras/).
 To use them, refer to their respective documentation.
+
+## ☀️ Light Theme
+
+A light variant is also available for those who prefer it.
+
+![Monoglow Light screenshot](https://github.com/user-attachments/assets/50e0f479-92a5-4ad1-9880-00511b765fb6)
 
 ## 🔥 Contributing
 

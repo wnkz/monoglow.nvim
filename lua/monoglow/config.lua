@@ -14,7 +14,7 @@ local M = {}
 ---@field on_colors? fun(colors: ColorScheme)
 ---@field on_highlights? fun(highlights: monoglow.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "z", -- The theme comes in three styles, `z`, a variant closer to lackluster `lack` and `void`
+  style = "z", -- The theme comes in four styles, `z`, `lack`, `void` and `light`
   glow = true, -- When `true`, some highlights will be bold (e.g. Function, Keyword, ...)
   transparent = false, -- When ``true`, the background will be transparent
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
