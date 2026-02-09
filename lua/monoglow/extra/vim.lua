@@ -8,6 +8,8 @@
 --
 --     http://www.apache.org/licenses/LICENSE-2.0
 
+local util = require("monoglow.util")
+
 local M = {}
 
 local mapping = {
@@ -24,6 +26,7 @@ local excluded_plugins = {
 --- @param groups monoglow.Highlights
 --- @param opts monoglow.Config
 function M.generate(colors, groups, opts)
+  util.bg = colors.bg
   opts.plugins = { all = false, auto = false, treesitter = false }
   local Groups = require("monoglow.groups")
   for p, n in pairs(Groups.plugins) do
