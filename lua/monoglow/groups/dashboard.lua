@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/nvimdev/dashboard-nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     -- General

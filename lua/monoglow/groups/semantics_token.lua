@@ -11,7 +11,7 @@
 local M = {}
 
 ---@type monoglow.HighlightsFn
-function M.get(c)
+function M.get(c, opts)
   -- NOTE: Many LSP semantic token groups are NOT defined here because Neovim
   -- provides sensible defaults in highlight_group.c that link to TS groups:
   --   @lsp.type.comment → @comment, @lsp.type.decorator → @attribute,

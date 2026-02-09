@@ -11,7 +11,7 @@
 local M = {}
 
 ---@type monoglow.HighlightsFn
-function M.get(c)
+function M.get(c, opts)
   -- NOTE: Many TS groups are NOT defined here because Neovim provides sensible
   -- defaults in highlight_group.c that link to standard Vim groups:
   --   @boolean → Boolean, @character → Character, @comment → Comment,

@@ -20,11 +20,11 @@ hi DiagnosticUnderlineHint gui=undercurl guibg=NONE guisp=#2a5e5e
 hi DiagnosticUnderlineInfo gui=undercurl guibg=NONE guisp=#1a8a89
 hi DiagnosticUnderlineOk gui=undercurl guibg=NONE guisp=#2a7a40
 hi DiagnosticUnderlineWarn gui=undercurl guibg=NONE guisp=#9a7a20
-hi DiagnosticVirtualTextError guibg=#2c2020 guifg=#c04040
-hi DiagnosticVirtualTextHint guibg=#1d2323 guifg=#2a5e5e
-hi DiagnosticVirtualTextInfo guibg=#1c2727 guifg=#1a8a89
-hi DiagnosticVirtualTextOk guibg=#1d2520 guifg=#2a7a40
-hi DiagnosticVirtualTextWarn guibg=#29251c guifg=#9a7a20
+hi DiagnosticVirtualTextError guibg=#231717 guifg=#c04040
+hi DiagnosticVirtualTextHint guibg=#141a1a guifg=#2a5e5e
+hi DiagnosticVirtualTextInfo guibg=#131e1e guifg=#1a8a89
+hi DiagnosticVirtualTextOk guibg=#141c17 guifg=#2a7a40
+hi DiagnosticVirtualTextWarn guibg=#201c13 guifg=#9a7a20
 hi DiagnosticWarn guibg=NONE guifg=#9a7a20
 hi DiffAdd guibg=#7ba283 guifg=#f0f0f0
 hi DiffChange guibg=#707070 guifg=#f0f0f0
@@ -50,6 +50,8 @@ hi Normal guibg=#f0f0f0 guifg=#3a3a3a
 hi NormalFloat guibg=#e8e8e8 guifg=#3a3a3a
 hi Operator gui=bold guibg=NONE guifg=#059669
 hi Pmenu guibg=#e7e7e7 guifg=#3a3a3a
+hi PmenuExtra guibg=NONE guifg=#b0b0b0
+hi PmenuKind guibg=NONE guifg=#555555
 hi PmenuSbar guibg=#d0d0d0 guifg=#909090
 hi PmenuSel gui=bold guibg=#059669 guifg=#f3f3f3
 hi PmenuThumb guibg=#909090 guifg=#d0d0d0

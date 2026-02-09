@@ -50,6 +50,8 @@ hi Normal guibg=#1c1c1c guifg=#c0c0c0
 hi NormalFloat guibg=#232323 guifg=#c0c0c0
 hi Operator gui=bold guibg=NONE guifg=#1bfd9c
 hi Pmenu guibg=#242424 guifg=#c0c0c0
+hi PmenuExtra guibg=NONE guifg=#404040
+hi PmenuKind guibg=NONE guifg=#b1b1b1
 hi PmenuSbar guibg=#303030 guifg=#585858
 hi PmenuSel gui=bold guibg=#1bfd9c guifg=#161616
 hi PmenuThumb guibg=#585858 guifg=#303030

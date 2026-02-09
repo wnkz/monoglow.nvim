@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/nvim-telescope/telescope.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     TelescopeBorder = { fg = c.border, bg = c.none },

@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/williamboman/mason.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     MasonHeader = { fg = c.black, bg = c.glow },

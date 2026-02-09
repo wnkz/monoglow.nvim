@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/OXY2DEV/markview.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     MarkviewBlockQuoteDefault = {},
