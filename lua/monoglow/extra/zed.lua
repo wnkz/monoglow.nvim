@@ -21,6 +21,7 @@ end
 -- Generate a single theme's style object
 ---@param colors ColorScheme
 local function generate_style(colors)
+  util.bg = colors.bg
   return {
     -- Background colors
     ["background"] = hex8(colors.bg),
