@@ -160,7 +160,7 @@ To use them, refer to their respective documentation.
 
 A light variant is also available for those who prefer it.
 
-![Monoglow Light screenshot](https://github.com/user-attachments/assets/50e0f479-92a5-4ad1-9880-00511b765fb6)
+![Monoglow Light screenshot](https://github.com/user-attachments/assets/2df72af5-5107-43da-a3c2-e03e7aefd772)
 
 ## 🔥 Contributing
 
