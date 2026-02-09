@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     NeoTreeFileName = { fg = c.fs.file },

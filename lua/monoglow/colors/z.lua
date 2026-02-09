@@ -1,4 +1,6 @@
 ---@class Palette
+---@field git GitColors
+---@field special? SpecialColors
 local ret = {
   gray1 = "#080808",
   gray2 = "#191919",

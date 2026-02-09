@@ -45,11 +45,11 @@ function M.setup(opts)
   ---@field ok string Diagnostic ok color
   ---@field todo string TODO comment color
   -- Tables
-  ---@field diff table Diff colors (add, delete, change, text)
-  ---@field special table Special syntax colors (comment, exception, keyword, param, property, whitespace)
-  ---@field syntax table Syntax highlighting colors
-  ---@field fs table Filesystem colors for file explorers
-  ---@field cmp table Completion menu colors
+  ---@field diff DiffColors Diff colors (add, delete, change, text)
+  ---@field special SpecialColors Special syntax colors (comment, exception, keyword, param, property, whitespace)
+  ---@field syntax SyntaxColors Syntax highlighting colors
+  ---@field fs FsColors Filesystem colors for file explorers
+  ---@field cmp CmpColors Completion menu colors
   ---@field terminal TerminalColors Terminal palette
   ---@field mode ModeColors Mode colors for statusline/vim indicators
   local colors = palette

@@ -46,7 +46,7 @@ label = { fg = "#707070" }
 "markup.link.text" = { fg = "#707070" }
 "markup.link.url" = { underline = { style = "line" } }
 "markup.list" = { fg = "#b0b0b0" }
-"markup.normal.completion" = 
+"markup.normal.completion" = { fg = "#a0a0a0" }
 "markup.normal.hover" = 
 "markup.raw" = { fg = "#555555" }
 "markup.raw.inline" = 

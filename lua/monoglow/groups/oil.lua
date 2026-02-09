@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/stevearc/oil.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     OilFile = { fg = c.fs.file },

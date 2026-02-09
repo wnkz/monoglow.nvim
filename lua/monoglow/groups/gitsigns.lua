@@ -2,6 +2,7 @@ local M = {}
 
 M.url = "https://github.com/lewis6991/gitsigns.nvim"
 
+---@type monoglow.HighlightsFn
 function M.get(c, opts)
   return {
     GitSignsAdd = { fg = c.git.add }, -- diff mode: Added line |diff.txt|

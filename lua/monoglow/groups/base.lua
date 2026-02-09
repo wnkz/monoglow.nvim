@@ -52,6 +52,8 @@ function M.get(c, opts)
     PmenuSel = { fg = c.black, bg = c.glow, bold = true }, -- Popup menu: selected item
     PmenuSbar = { fg = c.gray5, bg = c.gray3 }, -- Popup menu: scrollbar
     PmenuThumb = { fg = c.gray3, bg = c.gray5 }, -- Popup menu: Thumb of the scrollbar
+    PmenuExtra = { fg = c.gray4 }, -- Popup menu: extra text (e.g. kind label)
+    PmenuKind = { fg = c.cmp.kind }, -- Popup menu: kind icon/text
 
     -- editor:statusline
     StatusLine = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- Status line of current window
