@@ -9,12 +9,12 @@ palette = 0=#3a3a3a
 palette = 8=#555555
 
 #: red
-palette = 1=#2a5e5e
-palette = 9=#506070
+palette = 1=#ba0959
+palette = 9=#fd1b7c
 
 #: green
 palette = 2=#059669
-palette = 10=#00a573
+palette = 10=#059c6d
 
 #: yellow
 palette = 3=#4e4e4e
@@ -25,12 +25,12 @@ palette = 4=#707070
 palette = 12=#555555
 
 #: magenta
-palette = 5=#2e8a8a
-palette = 13=#009a9a
+palette = 5=#3b4855
+palette = 13=#506070
 
 #: cyan
-palette = 6=#3a3a3a
-palette = 14=#333333
+palette = 6=#2e8a8a
+palette = 14=#009a9a
 
 #: white
 palette = 7=#d0d0d0

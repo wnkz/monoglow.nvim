@@ -17,23 +17,23 @@ selection_fg = "#e1e1e1"
 
 ansi = [
   "#303030",
-  "#deeeed",
+  "#ba0959",
   "#1bfd9c",
   "#bababa",
   "#a1a1a1",
+  "#708090",
   "#66b2b2",
-  "#d1d1d1",
   "#f1f1f1",
 ]
 
 brights = [
   "#4d4d4d",
-  "#708090",
-  "#a6ffc9",
+  "#fd1b7c",
+  "#66ffad",
   "#e1e1e1",
   "#b1b1b1",
+  "#879aad",
   "#49c4c4",
-  "#d7d7d7",
   "#ffffff",
 ]
 

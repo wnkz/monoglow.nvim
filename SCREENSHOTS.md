@@ -41,3 +41,7 @@
 ### markview.nvim
 
 ![markview](https://github.com/user-attachments/assets/0edc62ca-e0d8-4b3c-a201-d8da78774367)
+
+## Terminal Colors
+
+<!-- TODO: Add terminal colors screenshot using scripts/terminal-colors.sh -->
