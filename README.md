@@ -15,9 +15,6 @@ A mostly monochrome colorscheme with a touch of glowing.
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
 - Terminal colors.
-
-![Terminal Colors](https://github.com/user-attachments/assets/f7b3e3a7-e2f3-4fd8-851d-8064150bb2e9)
-
 - Supports ~all major~ plugins (see below).
 
 > [!NOTE]
@@ -158,6 +155,10 @@ all available highlight groups.
 
 Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Vim](extras/vim/), [VS Code](extras/vscode/), [WezTerm](extras/wezterm/), and [Zed](extras/zed/) can be found in [extras/](extras/).
 To use them, refer to their respective documentation.
+
+### Terminal Colors
+
+![Terminal Colors](https://github.com/user-attachments/assets/1663931f-7c6e-4502-b7a0-7ff6a24cad06)
 
 ## ☀️ Light Theme
 
