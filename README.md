@@ -15,6 +15,9 @@ A mostly monochrome colorscheme with a touch of glowing.
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
 - Terminal colors.
+
+![Terminal Colors](https://github.com/user-attachments/assets/f7b3e3a7-e2f3-4fd8-851d-8064150bb2e9)
+
 - Supports ~all major~ plugins (see below).
 
 > [!NOTE]

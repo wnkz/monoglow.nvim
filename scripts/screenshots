@@ -27,6 +27,12 @@ vhs tapes/screenshot-custom-glow.tape -q
 echo "[vhs] Running tapes/screenshot-light.tape..."
 vhs tapes/screenshot-light.tape -q
 
+echo "[vhs] Running tapes/screenshot-terminal-colors.tape..."
+vhs tapes/screenshot-terminal-colors.tape -q
+
+echo "[vhs] Running tapes/screenshot-terminal-colors-light.tape..."
+vhs tapes/screenshot-terminal-colors-light.tape -q
+
 # Crop mode screenshots to statusline only
 echo ""
 echo "[crop] Cropping mode screenshots to statusline..."

@@ -164,24 +164,23 @@ function M.setup(opts)
     command = { bg = colors.glow, fg = colors.black }, -- same as insert
   }
 
-  -- Terminal colors
-  -- Inspired by https://github.com/PieterHeijman/terminal-color-themes/blob/master/movies/Psycho.json
+  -- Terminal colors (ANSI 16-color palette)
   ---@class TerminalColors
   colors.terminal = {
     black = colors.gray3,
     black_bright = util.lighten(colors.gray3, 0.80),
-    red = colors.luster,
-    red_bright = colors.lack,
+    red = util.brighten("#fd1b7c", -0.15, 0),
+    red_bright = "#fd1b7c",
     green = colors.glow,
-    green_bright = util.brighten(colors.glow),
+    green_bright = util.brighten(colors.glow, 0.02, 0),
     yellow = util.darken(colors.gray9, 0.80),
     yellow_bright = colors.gray9,
     blue = colors.gray6,
     blue_bright = colors.gray7,
-    magenta = colors.blue2,
-    magenta_bright = util.brighten(colors.blue2),
-    cyan = colors.gray8,
-    cyan_bright = util.lighten(colors.gray8, 0.80, colors.gray10),
+    magenta = colors.lack,
+    magenta_bright = util.brighten(colors.lack, 0.10, 0),
+    cyan = colors.blue2,
+    cyan_bright = util.brighten(colors.blue2),
     white = colors.gray10,
     white_bright = colors.white,
   }
@@ -190,6 +189,8 @@ function M.setup(opts)
     colors.terminal = vim.tbl_deep_extend("force", colors.terminal, {
       black = "#3a3a3a",
       black_bright = "#555555",
+      magenta = util.brighten(colors.lack, -0.10, 0),
+      magenta_bright = colors.lack,
       white = "#d0d0d0",
       white_bright = "#f0f0f0",
     })

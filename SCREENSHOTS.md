@@ -41,3 +41,9 @@
 ### markview.nvim
 
 ![markview](https://github.com/user-attachments/assets/0edc62ca-e0d8-4b3c-a201-d8da78774367)
+
+## Terminal Colors
+
+![terminal-colors](https://github.com/user-attachments/assets/f7b3e3a7-e2f3-4fd8-851d-8064150bb2e9)
+
+![terminal-colors-light](https://github.com/user-attachments/assets/1663931f-7c6e-4502-b7a0-7ff6a24cad06)
