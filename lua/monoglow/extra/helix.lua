@@ -16,11 +16,19 @@ local M = {}
 function M.generate(colors)
   -- Ref: https://github.com/helix-editor/helix/blob/master/book/src/themes.md
   -- nil is used when no equivalent was found.
+  --
+  -- Helix reserves 17 default palette names (default, black, red, green, yellow,
+  -- blue, magenta, cyan, gray, light-{red,green,yellow,blue,magenta,cyan,gray},
+  -- white). Custom palette entries override them. Our `light_*` keys use
+  -- underscores, so they do NOT shadow Helix's hyphenated defaults; `"helix"`
+  -- overrides below must only reference palette keys that actually exist in
+  -- `lua/monoglow/colors/init.lua` after `M.flatten(colors)`.
   local mapping = M.flatten({
     attribute = "@attribute",
     type = {
       "Type",
       builtin = "@type.builtin",
+      parameter = "@lsp.type.typeParameter",
       enum = {
         "@lsp.type.enum",
         variant = "@lsp.type.enumMember",
@@ -57,12 +65,15 @@ function M.generate(colors)
     },
     comment = {
       "@comment",
-      line = nil,
+      line = {
+        nil,
+        documentation = "@comment.documentation",
+      },
       block = {
         nil,
-        -- not sure about that one
-        documentation = "@string.documentation",
+        documentation = "@comment.documentation",
       },
+      unused = { "helix", fg = "syntax.comment", modifiers = { "italic" } },
     },
     variable = {
       "@variable",
@@ -74,23 +85,29 @@ function M.generate(colors)
       },
     },
     label = "@label",
+    punctuation = {
+      "Delimiter",
+      delimiter = "@punctuation.delimiter",
+      bracket = "@punctuation.bracket",
+      special = "@punctuation.special",
+    },
     keyword = {
       "@keyword",
       control = {
         "Statement",
         conditional = "Conditional",
         ["repeat"] = "Repeat",
-        import = nil,
+        import = "Include",
         ["return"] = "@keyword.return",
         exception = "Exception",
       },
       operator = "Statement",
       directive = "PreProc",
-      ["function"] = "@keyword.function",
+      ["function"] = { "helix", fg = "fg", modifiers = { "bold" } },
       storage = {
-        nil, -- rust: `let`
-        type = nil, -- rust: `struct` & `type`
-        modifier = nil, -- rust: `mut`
+        "StorageClass",
+        type = "Structure",
+        modifier = "StorageClass",
       },
     },
     operator = "Operator",
@@ -104,15 +121,14 @@ function M.generate(colors)
     },
     tag = {
       "@tag",
-      -- ???
-      builtin = nil,
+      builtin = "@tag.builtin",
     },
     namespace = "@lsp.type.namespace",
     special = "Special",
     markup = {
       nil,
       heading = {
-        "@markup.heading",
+        { "helix", fg = "fg_sidebar", modifiers = { "bold" } },
         marker = nil,
         -- post-processed to remove the 'h' as we already use the first element (1) as the root value.
         h1 = nil,
@@ -122,32 +138,29 @@ function M.generate(colors)
         h5 = nil,
         h6 = nil,
         -- UI --
-        completion = "Pmenu",
-        hover = "PmenuSel",
+        completion = { "helix", fg = "fg", bg = "bg_menu", modifiers = { "bold" } },
+        hover = { "helix", fg = "black", bg = "glow", modifiers = { "bold" } },
       },
       list = {
         "@markup.list",
         unnumbered = nil,
         numbered = nil,
-        checked = nil,
-        unchecked = nil,
+        checked = "@markup.list.checked",
+        unchecked = "@markup.list.unchecked",
       },
-      bold = "Bold",
-      italic = "Italic",
-      strikethrough = {
-        "helix",
-        modifiers = { "crossed_out" },
-      },
+      bold = { "helix", fg = "fg", modifiers = { "bold" } },
+      italic = { "helix", fg = "gray6", modifiers = { "italic" } },
+      strikethrough = { "helix", fg = "gray7", modifiers = { "crossed_out" } },
       link = {
-        "@markup.link",
-        url = "@markup.link.url",
-        label = "@markup.link.label",
+        { "helix", fg = "fg_sidebar", modifiers = { "underline" } },
+        url = { "helix", fg = "glow", underline = { style = "line" } },
+        label = { "helix", fg = "gray10", modifiers = { "underline" } },
         text = "@markup.link",
       },
-      quote = nil,
+      quote = "@markup.quote",
       raw = {
         "@markup.raw",
-        inline = "@markup.raw.markdown_inline",
+        inline = "@markup.raw",
         block = nil,
         -- UI --
         completion = nil,
@@ -156,23 +169,36 @@ function M.generate(colors)
       -- UI --
       normal = {
         nil,
-        completion = "CmpItemMenu",
-        hover = "CmpItemKindDefault",
+        completion = "Pmenu",
+        hover = { "helix", fg = "syntax.keyword_return", bg = "bg_menu" },
       },
     },
     diff = {
       nil,
-      plus = "diffAdded",
-      minus = "diffRemoved",
+      plus = {
+        { "helix", fg = "diff.add" },
+        gutter = "Added",
+      },
+      minus = {
+        { "helix", fg = "diff.delete" },
+        gutter = "Removed",
+      },
       delta = {
-        "diffChanged",
-        moved = "diffFile",
+        { "helix", fg = "diff.change" },
+        moved = { "helix", fg = "diff.change" },
+        conflict = { "helix", fg = "diff.text" },
+        gutter = "Changed",
       },
     },
     ui = {
       background = {
         { "helix", bg = "bg" },
         separator = nil,
+      },
+      bufferline = {
+        { "helix", fg = "fg_sidebar", bg = "bg_statusline" },
+        active = { "helix", fg = "fg", bg = "bg", modifiers = { "bold" } },
+        background = { "helix", bg = "bg_statusline" },
       },
       cursor = {
         "Cursor",
@@ -201,20 +227,26 @@ function M.generate(colors)
       },
       linenr = {
         "LineNr",
-        select = "CursorLineNr",
+        selected = "CursorLineNr",
+      },
+      picker = {
+        nil,
+        header = {
+          "TelescopePromptTitle",
+          column = {
+            nil,
+            active = "TelescopeSelection",
+          },
+        },
       },
       statusline = {
         "StatusLine",
         inactive = "StatusLineNc",
-        -- Inspired from lualine
-        normal = {
-          "helix",
-          bg = "blue",
-          fg = "black",
-        },
-        insert = nil,
-        select = nil,
-        separator = nil,
+        -- Mode pills (inspired by lualine).
+        normal = { "helix", fg = "black", bg = "glow", modifiers = { "bold" } },
+        insert = { "helix", fg = "black", bg = "light_cyan", modifiers = { "bold" } },
+        select = { "helix", fg = "black", bg = "light_yellow", modifiers = { "bold" } },
+        separator = { "helix", fg = "border" },
       },
       popup = {
         "TelescopeBorder",
@@ -228,10 +260,12 @@ function M.generate(colors)
         focus = "Visual",
         inactive = "Comment",
         info = "TelescopeNormal",
+        directory = "Directory",
+        symlink = { "helix", fg = "fs.link" },
       },
       virtual = {
         ruler = nil,
-        whitespace = nil,
+        whitespace = "Whitespace",
         ["indent-guide"] = nil,
         ["inlay-hint"] = {
           "DiagnosticVirtualTextHint",
@@ -239,18 +273,19 @@ function M.generate(colors)
           type = nil,
         },
         wrap = nil,
+        ["jump-label"] = { "helix", fg = "glow", modifiers = { "bold" } },
       },
       menu = {
         "Pmenu",
         selected = "PmenuSel",
         scroll = {
           "helix",
-          fg = vim.api.nvim_get_hl(0, { name = "PmenuThumb" }).bg,
-          bg = vim.api.nvim_get_hl(0, { name = "PmenuSbar" }).bg,
+          fg = M.to_rgb(vim.api.nvim_get_hl(0, { name = "PmenuThumb" }).bg),
+          bg = M.to_rgb(vim.api.nvim_get_hl(0, { name = "PmenuSbar" }).bg),
         },
       },
       selection = {
-        { "helix", bg = "bg_highlight" },
+        { "helix", bg = "visual" },
         primary = nil,
       },
       cursorline = {
@@ -268,10 +303,11 @@ function M.generate(colors)
     error = "DiagnosticError",
     diagnostic = {
       nil,
-      hint = "DiagnosticUnderlineHint",
-      info = "DiagnosticUnderlineInfo",
-      warning = "DiagnosticUnderlineWarn",
-      error = "DiagnosticUnderlineError",
+      hint = { "helix", fg = "hint", underline = { style = "curl" } },
+      info = { "helix", fg = "info", underline = { style = "curl" } },
+      warning = { "helix", fg = "warning", underline = { style = "curl" } },
+      error = { "helix", fg = "error", underline = { style = "curl" } },
+      unnecessary = { "helix", fg = "gray5", modifiers = { "italic" } },
     },
   })
 
@@ -301,7 +337,11 @@ function M.generate(colors)
       print("Unknown highlight for " .. hx_scope)
       goto continue
     end
-    table.insert(config, string.format("%s = %s", hx_scope, M.to_helix_config(highlight)))
+    local config_str = M.to_helix_config(highlight)
+    if config_str == nil then
+      goto continue
+    end
+    table.insert(config, string.format("%s = %s", hx_scope, config_str))
 
     ::continue::
   end
@@ -386,7 +426,7 @@ function M.to_helix_config(highlight)
       end
       if mods.undercurl and highlight.sp then
         style.underline = {
-          color = M.to_rgb(mods.sp),
+          color = M.to_rgb(highlight.sp),
           style = "curl",
         }
       end
@@ -394,6 +434,9 @@ function M.to_helix_config(highlight)
   end
   if next(modifiers) ~= nil then
     style.modifiers = M.key_set(modifiers)
+  end
+  if not style.fg and not style.bg and not style.underline and not style.modifiers then
+    return nil
   end
   return M.to_toml(style)
 end
@@ -445,6 +488,9 @@ function M.insert_as_toml(buffer, x)
     end
   elseif type(x) == "string" then
     table.insert(buffer, "\"" .. x .. "\"")
+  elseif type(x) == "number" then
+    -- Colors from nvim_get_hl arrive as 24-bit RGB ints; emit as quoted hex.
+    table.insert(buffer, string.format("\"#%06x\"", x))
   elseif type(x) ~= nil then
     table.insert(buffer, tostring(x))
   end

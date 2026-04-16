@@ -1,6 +1,8 @@
 attribute = { fg = "#949494" }
 comment = { fg = "#585858", modifiers = ["italic"] }
-"comment.block.documentation" = 
+"comment.block.documentation" = { fg = "#585858", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "#585858", modifiers = ["italic"] }
+"comment.unused" = { fg = "syntax.comment", modifiers = ["italic"] }
 constant = { fg = "#b1b1b1" }
 "constant.builtin" = { fg = "#a1a1a1" }
 "constant.builtin.boolean" = { fg = "#66b2b2" }
@@ -10,14 +12,19 @@ constant = { fg = "#b1b1b1" }
 "constant.numeric.float" = { fg = "#b1b1b1" }
 "constant.numeric.integer" = { fg = "#b1b1b1" }
 constructor = { fg = "#b1b1b1" }
-"diagnostic.error" = { underline = { style = "curl" } }
-"diagnostic.hint" = { underline = { style = "curl" } }
-"diagnostic.info" = { underline = { style = "curl" } }
-"diagnostic.warning" = { underline = { style = "curl" } }
-"diff.delta" = 
-"diff.delta.moved" = 
-"diff.minus" = 
-"diff.plus" = 
+"diagnostic.error" = { fg = "error", underline = { style = "curl" } }
+"diagnostic.hint" = { fg = "hint", underline = { style = "curl" } }
+"diagnostic.info" = { fg = "info", underline = { style = "curl" } }
+"diagnostic.unnecessary" = { fg = "gray5", modifiers = ["italic"] }
+"diagnostic.warning" = { fg = "warning", underline = { style = "curl" } }
+"diff.delta" = { fg = "diff.change" }
+"diff.delta.conflict" = { fg = "diff.text" }
+"diff.delta.gutter" = { fg = "#a1a1a1" }
+"diff.delta.moved" = { fg = "diff.change" }
+"diff.minus" = { fg = "diff.delete" }
+"diff.minus.gutter" = { fg = "#a4777b" }
+"diff.plus" = { fg = "diff.add" }
+"diff.plus.gutter" = { fg = "#7ba484" }
 error = { fg = "#ffc0b9" }
 function = { fg = "#d1d1d1", modifiers = ["bold"] }
 "function.builtin" = { fg = "#666666" }
@@ -30,56 +37,81 @@ keyword = { fg = "#949494" }
 "keyword.control" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.conditional" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.exception" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.repeat" = { fg = "#949494", modifiers = ["bold"] }
 "keyword.control.return" = { fg = "#6c6c6c", modifiers = ["bold"] }
 "keyword.directive" = { fg = "#949494", modifiers = ["bold"] }
-"keyword.function" = 
+"keyword.function" = { fg = "fg", modifiers = ["bold"] }
 "keyword.operator" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.storage" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.storage.modifier" = { fg = "#949494", modifiers = ["bold"] }
+"keyword.storage.type" = { fg = "#b1b1b1" }
 label = { fg = "#a1a1a1" }
-"markup.bold" = 
-"markup.heading" = { fg = "#a1a1a1" }
-"markup.heading.completion" = { bg = "#242424", fg = "#c0c0c0" }
-"markup.heading.hover" = { bg = "#1bfd9c", fg = "#161616", modifiers = ["bold"] }
-"markup.italic" = 
-"markup.link" = { fg = "#a1a1a1" }
-"markup.link.label" = { fg = "#f1f1f1" }
+"markup.bold" = { fg = "fg", modifiers = ["bold"] }
+"markup.heading" = { fg = "fg_sidebar", modifiers = ["bold"] }
+"markup.heading.completion" = { bg = "bg_menu", fg = "fg", modifiers = ["bold"] }
+"markup.heading.hover" = { bg = "glow", fg = "black", modifiers = ["bold"] }
+"markup.italic" = { fg = "gray6", modifiers = ["italic"] }
+"markup.link" = { fg = "fg_sidebar", modifiers = ["underline"] }
+"markup.link.label" = { fg = "gray10", modifiers = ["underline"] }
 "markup.link.text" = { fg = "#a1a1a1" }
-"markup.link.url" = { underline = { style = "line" } }
+"markup.link.url" = { fg = "glow", underline = { style = "line" } }
 "markup.list" = { fg = "#404040" }
-"markup.normal.completion" = { fg = "#585858" }
-"markup.normal.hover" = 
+"markup.list.checked" = { fg = "#b3f6c0" }
+"markup.list.unchecked" = { fg = "#8cf8f7" }
+"markup.normal.completion" = { bg = "#242424", fg = "#c0c0c0" }
+"markup.normal.hover" = { bg = "bg_menu", fg = "syntax.keyword_return" }
+"markup.quote" = { fg = "#a1a1a1" }
 "markup.raw" = { fg = "#b1b1b1" }
-"markup.raw.inline" = 
-"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.raw.inline" = { fg = "#b1b1b1" }
+"markup.strikethrough" = { fg = "gray7", modifiers = ["crossed_out"] }
 namespace = { fg = "#949494", modifiers = ["bold"] }
 operator = { fg = "#1bfd9c", modifiers = ["bold"] }
+punctuation = { fg = "#d1d1d1" }
+"punctuation.bracket" = { fg = "#d1d1d1" }
+"punctuation.delimiter" = { fg = "#d1d1d1" }
+"punctuation.special" = { fg = "#d1d1d1" }
 special = { fg = "#f1f1f1" }
 string = { fg = "#b1b1b1" }
 "string.regexp" = { fg = "#708090" }
 "string.special" = { fg = "#708090" }
 tag = { fg = "#b1b1b1" }
+"tag.builtin" = { fg = "#b1b1b1" }
 type = { fg = "#b1b1b1" }
 "type.builtin" = { fg = "#b1b1b1" }
 "type.enum" = { fg = "#b1b1b1" }
 "type.enum.variant" = { fg = "#b1b1b1" }
+"type.parameter" = { fg = "#d1d1d1" }
 "ui.background" = { bg = "bg" }
+"ui.bufferline" = { bg = "bg_statusline", fg = "fg_sidebar" }
+"ui.bufferline.active" = { bg = "bg", fg = "fg", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "bg_statusline" }
 "ui.cursor" = { bg = "#c0c0c0", fg = "#1c1c1c" }
 "ui.cursor.match" = { fg = "#1bfd9c", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#404040" }
-"ui.linenr.select" = { fg = "#b1b1b1" }
+"ui.linenr.selected" = { fg = "#b1b1b1" }
 "ui.menu" = { bg = "#242424", fg = "#c0c0c0" }
-"ui.menu.scroll" = { bg = 3158064, fg = 5789784 }
+"ui.menu.scroll" = { bg = "#303030", fg = "#585858" }
 "ui.menu.selected" = { bg = "#1bfd9c", fg = "#161616", modifiers = ["bold"] }
+"ui.picker.header" = { fg = "#c0c0c0", modifiers = ["bold"] }
+"ui.picker.header.column.active" = { bg = "#292929", fg = "#c0c0c0", modifiers = ["bold"] }
 "ui.popup" = { fg = "#404040" }
-"ui.selection" = { bg = "bg_highlight" }
+"ui.selection" = { bg = "visual" }
 "ui.statusline" = { bg = "#212121", fg = "#a1a1a1" }
 "ui.statusline.inactive" = { bg = "#212121", fg = "#404040" }
-"ui.statusline.normal" = { bg = "blue", fg = "black" }
+"ui.statusline.insert" = { bg = "light_cyan", fg = "black", modifiers = ["bold"] }
+"ui.statusline.normal" = { bg = "glow", fg = "black", modifiers = ["bold"] }
+"ui.statusline.select" = { bg = "light_yellow", fg = "black", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "border" }
 "ui.text" = { bg = "#1c1c1c", fg = "#c0c0c0" }
+"ui.text.directory" = { fg = "#b1b1b1" }
 "ui.text.focus" = { bg = "#313131" }
 "ui.text.inactive" = { fg = "#585858", modifiers = ["italic"] }
 "ui.text.info" = { fg = "#c0c0c0" }
+"ui.text.symlink" = { fg = "fs.link" }
 "ui.virtual.inlay-hint" = { bg = "#2f3131", fg = "#deeeed" }
+"ui.virtual.jump-label" = { fg = "glow", modifiers = ["bold"] }
+"ui.virtual.whitespace" = { fg = "#414141" }
 "ui.window" = { fg = "#404040" }
 variable = { fg = "#d1d1d1" }
 "variable.builtin" = { fg = "#949494" }
