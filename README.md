@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=wnkz&project=monoglow.nvim&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # 🎆 Mono Glow
 
 A mostly monochrome colorscheme with a touch of glowing.
