@@ -44,15 +44,16 @@ A mostly monochrome colorscheme with a touch of glowing.
 <details>
 <summary>🍭 Extras</summary>
 
-| Tool                                               | Extra                            |
-| -------------------------------------------------- | -------------------------------- |
-| [Ghostty](https://ghostty.org/docs/features/theme) | [extras/ghostty](extras/ghostty) |
-| [Helix](https://helix-editor.com/)                 | [extras/helix](extras/helix)     |
-| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty)     |
-| [Vim](https://vimhelp.org/)                        | [extras/vim](extras/vim)         |
-| [VS Code](https://code.visualstudio.com/)          | [extras/vscode](extras/vscode)   |
-| [WezTerm](https://wezterm.org/)                    | [extras/wezterm](extras/wezterm) |
-| [Zed](https://zed.dev/)                            | [extras/zed](extras/zed)         |
+| Tool                                               | Extra                              |
+| -------------------------------------------------- | ---------------------------------- |
+| [Ghostty](https://ghostty.org/docs/features/theme) | [extras/ghostty](extras/ghostty)   |
+| [Helix](https://helix-editor.com/)                 | [extras/helix](extras/helix)       |
+| [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) | [extras/kitty](extras/kitty)       |
+| [Obsidian](https://obsidian.md/)                   | [extras/obsidian](extras/obsidian) |
+| [Vim](https://vimhelp.org/)                        | [extras/vim](extras/vim)           |
+| [VS Code](https://code.visualstudio.com/)          | [extras/vscode](extras/vscode)     |
+| [WezTerm](https://wezterm.org/)                    | [extras/wezterm](extras/wezterm)   |
+| [Zed](https://zed.dev/)                            | [extras/zed](extras/zed)           |
 
 </details>
 
@@ -153,7 +154,7 @@ all available highlight groups.
 
 ## 🍭 Extras
 
-Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Vim](extras/vim/), [VS Code](extras/vscode/), [WezTerm](extras/wezterm/), and [Zed](extras/zed/) can be found in [extras/](extras/).
+Extra color configs for [Ghostty](extras/ghostty/), [Kitty](extras/kitty/), [Helix](extras/helix/), [Obsidian](extras/obsidian/), [Vim](extras/vim/), [VS Code](extras/vscode/), [WezTerm](extras/wezterm/), and [Zed](extras/zed/) can be found in [extras/](extras/).
 To use them, refer to their respective documentation.
 
 ### Terminal Colors

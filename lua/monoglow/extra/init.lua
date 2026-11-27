@@ -13,11 +13,18 @@ local util = require("monoglow.util")
 local M = {}
 
 -- map of plugin name to plugin extension
---- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string, all_styles?:boolean}>
+--- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string, all_styles?:boolean, fname?:string}>
 M.extras = {
   ghostty = { ext = "", url = "https://ghostty.org/docs/features/theme", label = "Ghostty" },
   kitty = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },
+  obsidian = {
+    ext = "css",
+    url = "https://obsidian.md/",
+    label = "Obsidian",
+    all_styles = true,
+    fname = "theme",
+  },
   opencode = { ext = "json", url = "https://opencode.ai/", label = "OpenCode", sep = "-" },
   vim = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   vscode = { ext = "json", url = "https://code.visualstudio.com/", label = "VS Code", subdir = "themes", sep = "-" },
@@ -57,7 +64,7 @@ function M.setup()
         colors["_appearance"] = colors.is_light and "light" or "dark"
         all_colors[style] = colors
       end
-      local fname = extra .. "/monoglow." .. info.ext
+      local fname = extra .. "/" .. (info.fname or "monoglow") .. "." .. info.ext
       print("[write] " .. fname)
       util.write("extras/" .. fname, plugin.generate(all_colors))
     else
